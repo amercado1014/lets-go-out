@@ -3,7 +3,7 @@ import './styles.css';
 import { Route } from 'react-router-dom';
 import { Main } from '../Main';
 
-class App extends Component {
+export class App extends Component {
   render() {
     return (
       <div className="App">
