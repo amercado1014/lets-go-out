@@ -21,9 +21,14 @@ ShallowWrapper {
         <h1>
           Let's Order Out
 </h1>,
-        <form>
+        <form
+          onSubmit={[Function]}
+>
           <input
+                    onChange={[Function]}
+                    placeholder="Enter city or zip code"
                     type="text"
+                    value=""
           />
           <button
                     type="submit"
@@ -53,7 +58,10 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <input
+              onChange={[Function]}
+              placeholder="Enter city or zip code"
               type="text"
+              value=""
 />,
             <button
               type="submit"
@@ -61,6 +69,7 @@ ShallowWrapper {
               Search
 </button>,
           ],
+          "onSubmit": [Function],
         },
         "ref": null,
         "rendered": Array [
@@ -69,7 +78,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "onChange": [Function],
+              "placeholder": "Enter city or zip code",
               "type": "text",
+              "value": "",
             },
             "ref": null,
             "rendered": null,
@@ -103,9 +115,14 @@ ShallowWrapper {
           <h1>
             Let's Order Out
 </h1>,
-          <form>
+          <form
+            onSubmit={[Function]}
+>
             <input
+                        onChange={[Function]}
+                        placeholder="Enter city or zip code"
                         type="text"
+                        value=""
             />
             <button
                         type="submit"
@@ -135,7 +152,10 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <input
+                onChange={[Function]}
+                placeholder="Enter city or zip code"
                 type="text"
+                value=""
 />,
               <button
                 type="submit"
@@ -143,6 +163,7 @@ ShallowWrapper {
                 Search
 </button>,
             ],
+            "onSubmit": [Function],
           },
           "ref": null,
           "rendered": Array [
@@ -151,7 +172,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
+                "onChange": [Function],
+                "placeholder": "Enter city or zip code",
                 "type": "text",
+                "value": "",
               },
               "ref": null,
               "rendered": null,

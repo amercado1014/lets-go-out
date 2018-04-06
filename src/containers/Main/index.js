@@ -15,6 +15,11 @@ export class Main extends Component {
     this.setState({ searchValue: value });
   }
 
+  handleSubmit = event => {
+    event.preventDefault();
+    this.props.history.push('/restaurants');
+  }
+
   render() {
     return (
       <div>
