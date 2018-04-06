@@ -13,7 +13,11 @@ export class Main extends Component {
   render() {
     return (
       <div>
-        Hello
+        <h1>{ "Let's Order Out" }</h1>
+        <form>
+          <input type="text"/>
+          <button type="submit">Search</button>
+        </form>
       </div>
     );
   }
