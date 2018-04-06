@@ -10,12 +10,21 @@ export class Main extends Component {
     };
   }
 
+  handleChange = event => {
+    const { value } = event.target;
+    this.setState({ searchValue: value });
+  }
+
   render() {
     return (
       <div>
         <h1>{ "Let's Order Out" }</h1>
-        <form>
-          <input type="text"/>
+        <form onSubmit={this.handleSubmit}>
+          <input 
+            type="text"
+            value={this.state.searchValue}
+            placeholder="Enter city or zip code"
+            onChange={this.handleChange}/>
           <button type="submit">Search</button>
         </form>
       </div>
