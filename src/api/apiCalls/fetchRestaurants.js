@@ -8,7 +8,8 @@ export const fetchRestaurants = async search => {
     });
     const restaurants = await response.json();
     console.log(restaurants.restaurants);
+    return restaurants.restaurants;
   } catch (error) {
-    throw error.message;
+    throw new Error('Error fetching restaurants: ', error);
   }
 };
