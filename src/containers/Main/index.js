@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './styles.css';
 import { fetchRestaurants } from '../../api/apiCalls/fetchRestaurants';
+import { restaurantsCleaner } from '../../api/helpers/restaurantsCleaner';
 
 export class Main extends Component {
   constructor(props) {
@@ -16,11 +17,12 @@ export class Main extends Component {
     this.setState({ searchValue: value });
   }
 
-  handleSubmit = event => {
+  handleSubmit = async event => {
     const { searchValue } = this.state;
     event.preventDefault();
     try {
-      fetchRestaurants(searchValue);
+      const restaurants = await fetchRestaurants(searchValue);
+      const cleanRestaurants = restaurantsCleaner(restaurants);
       this.props.history.push('/restaurants');
     } catch (error) {
       throw error.message;
