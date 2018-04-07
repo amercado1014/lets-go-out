@@ -7,7 +7,7 @@ export const fetchRestaurants = async search => {
       headers: { "X-Access-Token": "9ad1eeeff9cdfed8" }
     });
     const restaurants = await response.json();
-    console.log(restaurants);
+    console.log(restaurants.restaurants);
   } catch (error) {
     throw error.message;
   }
