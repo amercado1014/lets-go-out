@@ -5,11 +5,14 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 export const RestaurantContainer = ({restaurants}) => {
-  console.log(restaurants);
+  const displayRestaurants = restaurants.map(restaurant => {
+    return <Restaurant key={restaurant.name} restaurant={restaurant} />;
+  });
+  
   return (
     <div>
       <h1>{ "Let's Order Out" }</h1>
-      <Restaurant />
+      {displayRestaurants}
     </div>
   );
 };
