@@ -4,7 +4,8 @@ import Restaurant from '../Restaurants';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-export const RestaurantContainer = () => {
+export const RestaurantContainer = ({restaurants}) => {
+  console.log(restaurants);
   return (
     <div>
       <h1>{ "Let's Order Out" }</h1>
@@ -13,4 +14,12 @@ export const RestaurantContainer = () => {
   );
 };
 
-export default RestaurantContainer;
+export const mapStateToProps = state => ({
+  restaurants: state.restaurants
+});
+
+RestaurantContainer.propTypes = {
+  restaurants: PropTypes.array
+};
+
+export default connect(mapStateToProps)(RestaurantContainer);
