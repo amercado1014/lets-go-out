@@ -9,7 +9,7 @@ import rootReducer from './reducers';
 
 //eslint-disable-next-line
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
-const store = creatStore(rootReducer, devTools);
+const store = createStore(rootReducer, devTools);
 
 const router = (
   <Provider store={store}>

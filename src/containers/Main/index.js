@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import './styles.css';
 import { fetchRestaurants } from '../../api/apiCalls/fetchRestaurants';
 import { restaurantsCleaner } from '../../api/helpers/restaurantsCleaner';
+import { withRouter } from 'react-router-dom';
+import { addRestaurants } from '../../actions/';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 export class Main extends Component {
   constructor(props) {
@@ -23,6 +27,7 @@ export class Main extends Component {
     try {
       const restaurants = await fetchRestaurants(searchValue);
       const cleanRestaurants = restaurantsCleaner(restaurants);
+      this.props.addRestaurants(cleanRestaurants);
       this.props.history.push('/restaurants');
     } catch (error) {
       throw error.message;
@@ -46,4 +51,12 @@ export class Main extends Component {
   }
 }
 
-export default Main;
+export const mapDispatchToProps = dispatch => ({
+  addRestaurants: restaurants => dispatch(addRestaurants(restaurants))
+});
+
+Main.propTypes = {
+  history: PropTypes.object
+};
+
+export default withRouter(connect(null, mapDispatchToProps)(Main));

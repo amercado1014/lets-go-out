@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './styles.css';
 import { Route } from 'react-router-dom';
-import { Main } from '../Main';
+import Main from '../Main';
 import { Restaurants } from '../Restaurants';
 
 export class App extends Component {
