@@ -15,7 +15,7 @@ export const Restaurants = ({restaurant}) => {
       <p>{`${city} ${state} ${zip}`}</p>
       <p>{phone}</p>
       <p>{`Food types: ${foodTypes}`}</p>
-      <p>{hoursInfo}</p>
+      {hoursInfo}
     </div>
   );
 };
