@@ -1,8 +1,8 @@
-import { fetchRestaurants } from '../fetchRestaurants';
+import { fetchRestaurantsBySearch } from '../fetchRestaurantsBySearch';
 import { mockRestaurantsApiData, 
   returnedMockRestaurantApiData } from '../../../mockData/mockData';
 
-describe('fetchRestaurants', () => {
+describe('fetchRestaurantsBySearch', () => {
 
   beforeEach(() => {
     window.fetch = jest.fn().mockImplementation(() =>
@@ -14,13 +14,13 @@ describe('fetchRestaurants', () => {
   });
 
   it('should call fetch', () => {
-    fetchRestaurants();
+    fetchRestaurantsBySearch();
     expect(window.fetch).toHaveBeenCalled();
   });
 
   it('should return fetched data', async () => {
     const expected = returnedMockRestaurantApiData;
-    await expect(fetchRestaurants()).resolves.toEqual(expected);
+    await expect(fetchRestaurantsBySearch()).resolves.toEqual(expected);
   });
 
   it('should throw an error if fetch has an error', () => {
@@ -30,6 +30,6 @@ describe('fetchRestaurants', () => {
         ok: false
       })
     );
-    expect(fetchRestaurants()).rejects.toEqual(expected);
+    expect(fetchRestaurantsBySearch()).rejects.toEqual(expected);
   });
 });
