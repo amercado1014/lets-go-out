@@ -7,7 +7,7 @@ import { addRestaurants } from '../../actions/';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-export class Main extends Component {
+export class Header extends Component {
   constructor(props) {
     super(props);
 
@@ -28,7 +28,7 @@ export class Main extends Component {
       const restaurants = await fetchRestaurants(searchValue);
       const cleanRestaurants = restaurantsCleaner(restaurants);
       this.props.addRestaurants(cleanRestaurants);
-      this.props.history.push('/restaurants');
+      this.props.history.push('/');
     } catch (error) {
       throw error.message;
     }
@@ -55,8 +55,9 @@ export const mapDispatchToProps = dispatch => ({
   addRestaurants: restaurants => dispatch(addRestaurants(restaurants))
 });
 
-Main.propTypes = {
-  history: PropTypes.object
+Header.propTypes = {
+  history: PropTypes.object,
+  addRestaurants: PropTypes.func
 };
 
-export default withRouter(connect(null, mapDispatchToProps)(Main));
+export default withRouter(connect(null, mapDispatchToProps)(Header));
