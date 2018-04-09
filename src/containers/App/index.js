@@ -8,8 +8,9 @@ export class App extends Component {
   render() {
     return (
       <div className="App">
-        <Route exact path='/' component={ Main } />
-        <Route path='/restaurants' component={ RestaurantsContainer } />
+        <Main />
+        <Route exact path='/' component={ RestaurantsContainer } />
+        {/* <Route path='/restaurants' component={ RestaurantsContainer } /> */}
       </div>
     );
   }

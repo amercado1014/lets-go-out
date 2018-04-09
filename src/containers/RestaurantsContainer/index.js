@@ -11,7 +11,6 @@ export const RestaurantContainer = ({restaurants}) => {
   
   return (
     <div>
-      <h1>{ "Let's Order Out" }</h1>
       {displayRestaurants}
     </div>
   );

@@ -28,7 +28,7 @@ export class Main extends Component {
       const restaurants = await fetchRestaurants(searchValue);
       const cleanRestaurants = restaurantsCleaner(restaurants);
       this.props.addRestaurants(cleanRestaurants);
-      this.props.history.push('/restaurants');
+      this.props.history.push('/');
     } catch (error) {
       throw error.message;
     }

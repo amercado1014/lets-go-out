@@ -1,4 +1,4 @@
-import apiKey from './apiKey';
+import { apiKey } from './apiKey';
 
 export const fetchRestaurants = async search => {
   const root = 'https://api.eatstreet.com/publicapi/v1'; 
