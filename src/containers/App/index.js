@@ -4,6 +4,8 @@ import { Route } from 'react-router-dom';
 import Header from '../Header';
 import RestaurantsContainer from '../RestaurantsContainer';
 import { fetchLocation } from '../../api/apiCalls/fetchLocation';
+import { fetchRestaurants } from '../../api/apiCalls/fetchRestaurants';
+import { restaurantsCleaner } from '../../api/helpers/restaurantsCleaner';
 
 export class App extends Component {
   constructor(props) {
@@ -17,7 +19,9 @@ export class App extends Component {
   async componentDidMount() {
     try {
       const location = await fetchLocation();
-      console.log(location)
+      const restaurants = await fetchRestaurants(location);
+      const cleanRestaurants = restaurantsCleaner(restaurants);
+      console.log(cleanRestaurants);
     } catch (error) {
       this.setState({error});
     }
