@@ -7,7 +7,7 @@ import { addRestaurants } from '../../actions/';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-export class Main extends Component {
+export class Header extends Component {
   constructor(props) {
     super(props);
 
@@ -55,8 +55,8 @@ export const mapDispatchToProps = dispatch => ({
   addRestaurants: restaurants => dispatch(addRestaurants(restaurants))
 });
 
-Main.propTypes = {
+Header.propTypes = {
   history: PropTypes.object
 };
 
-export default withRouter(connect(null, mapDispatchToProps)(Main));
+export default withRouter(connect(null, mapDispatchToProps)(Header));
