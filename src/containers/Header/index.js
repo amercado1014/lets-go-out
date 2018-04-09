@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './styles.css';
-import { fetchRestaurants } from '../../api/apiCalls/fetchRestaurants';
+import { fetchRestaurantsBySearch 
+} from '../../api/apiCalls/fetchRestaurantsBySearch';
 import { restaurantsCleaner } from '../../api/helpers/restaurantsCleaner';
-import { withRouter } from 'react-router-dom';
 import { addRestaurants } from '../../actions/';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -25,10 +25,9 @@ export class Header extends Component {
     const { searchValue } = this.state;
     event.preventDefault();
     try {
-      const restaurants = await fetchRestaurants(searchValue);
+      const restaurants = await fetchRestaurantsBySearch(searchValue);
       const cleanRestaurants = restaurantsCleaner(restaurants);
       this.props.addRestaurants(cleanRestaurants);
-      this.props.history.push('/');
     } catch (error) {
       throw error.message;
     }
@@ -56,8 +55,7 @@ export const mapDispatchToProps = dispatch => ({
 });
 
 Header.propTypes = {
-  history: PropTypes.object,
   addRestaurants: PropTypes.func
 };
 
-export default withRouter(connect(null, mapDispatchToProps)(Header));
+export default connect(null, mapDispatchToProps)(Header);

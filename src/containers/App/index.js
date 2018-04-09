@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 import Header from '../Header';
 import RestaurantsContainer from '../RestaurantsContainer';
 import { fetchLocation } from '../../api/apiCalls/fetchLocation';
-import { fetchRestaurants } from '../../api/apiCalls/fetchRestaurants';
+import { fetchRestaurantsByLocation } from '../../api/apiCalls/fetchRestaurantsByLocation';
 import { restaurantsCleaner } from '../../api/helpers/restaurantsCleaner';
 import { addRestaurants } from '../../actions';
 import { connect } from 'react-redux';
@@ -22,7 +22,7 @@ export class App extends Component {
   async componentDidMount() {
     try {
       const location = await fetchLocation();
-      const restaurants = await fetchRestaurants(location);
+      const restaurants = await fetchRestaurantsByLocation(location);
       const cleanRestaurants = restaurantsCleaner(restaurants);
       this.props.addRestaurants(cleanRestaurants);
     } catch (error) {
