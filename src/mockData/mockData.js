@@ -119,3 +119,25 @@ export const returnedMockRestaurantApiData = [
     "timezone": "US/Mountain"
   }
 ];
+
+export const cleanRestaurantData = {
+  apiKey: "aa1163f8eb68a8f7144247b91fbcb2f39e65e39821ec08a9",
+  logoUrl: "https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png",
+  name: "Big Daddy's Pizza - Lakewood",
+  streetAddress: "850 Wadsworth Blvd",
+  city: "Lakewood",
+  state: "CO",
+  zip: "80214",
+  foodTypes: "Pizza",
+  phone: "(303) 736-6090",
+  url: "https://eatstreet.com/lakewood-co/restaurants/big-daddys-pizza-lakewood",
+  hours: {
+    Monday: "11:00 AM - 3:00 AM",
+    Saturday: "11:00 AM - 3:00 AM",
+    Sunday: "11:00 AM - 3:00 AM",
+    Wednesday: "11:00 AM - 3:00 AM",
+    Tuesday: "11:00 AM - 3:00 AM",
+    Friday: "11:00 AM - 3:00 AM",
+    Thursday: "11:00 AM - 3:00 AM"
+  }
+};
