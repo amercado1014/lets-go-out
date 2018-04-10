@@ -4,7 +4,8 @@ import { Route } from 'react-router-dom';
 import Header from '../Header';
 import RestaurantsContainer from '../RestaurantsContainer';
 import { fetchLocation } from '../../api/apiCalls/fetchLocation';
-import { fetchRestaurantsByLocation } from '../../api/apiCalls/fetchRestaurantsByLocation';
+import { fetchRestaurantsByLocation 
+} from '../../api/apiCalls/fetchRestaurantsByLocation';
 import { restaurantsCleaner } from '../../api/helpers/restaurantsCleaner';
 import { addRestaurants } from '../../actions';
 import { connect } from 'react-redux';
@@ -20,11 +21,12 @@ export class App extends Component {
   }
 
   async componentDidMount() {
+    const { addRestaurants } = this.props;
     try {
       const location = await fetchLocation();
       const restaurants = await fetchRestaurantsByLocation(location);
       const cleanRestaurants = restaurantsCleaner(restaurants);
-      this.props.addRestaurants(cleanRestaurants);
+      addRestaurants(cleanRestaurants);
     } catch (error) {
       this.setState({error});
     }
