@@ -1,12 +1,12 @@
 import React from 'react';
-import { Main } from '../Main';
+import { Header } from '../Header';
 import { shallow } from 'enzyme';
 
-describe('Main', () => {
+describe('Header', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<Main />);
+    wrapper = shallow(<Header />);
   });
 
   it('should math the snapshot', () => {
