@@ -18,14 +18,11 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <Connect(Header) />,
         <Route
           component={[Function]}
           exact={true}
           path="/"
-/>,
-        <Route
-          component={[Function]}
-          path="/restaurants"
 />,
       ],
       "className": "App",
@@ -36,11 +33,7 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {
-          "component": [Function],
-          "exact": true,
-          "path": "/",
-        },
+        "props": Object {},
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -51,7 +44,8 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "component": [Function],
-          "path": "/restaurants",
+          "exact": true,
+          "path": "/",
         },
         "ref": null,
         "rendered": null,
@@ -67,14 +61,11 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <Connect(Header) />,
           <Route
             component={[Function]}
             exact={true}
             path="/"
-/>,
-          <Route
-            component={[Function]}
-            path="/restaurants"
 />,
         ],
         "className": "App",
@@ -85,11 +76,7 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {
-            "component": [Function],
-            "exact": true,
-            "path": "/",
-          },
+          "props": Object {},
           "ref": null,
           "rendered": null,
           "type": [Function],
@@ -100,7 +87,8 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "component": [Function],
-            "path": "/restaurants",
+            "exact": true,
+            "path": "/",
           },
           "ref": null,
           "rendered": null,
