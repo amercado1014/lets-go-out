@@ -210,3 +210,8 @@ export const cleanRestaurantsArray = [
     zip: "80227" 
   }
 ];
+
+export const mockLocationApiData = { 
+  lat: 39.7047095, 
+  lng: -105.08137339999999 
+};
