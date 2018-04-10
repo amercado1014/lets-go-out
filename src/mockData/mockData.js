@@ -186,3 +186,27 @@ export const mockRestaurants = [
     }
   }
 ];
+
+export const cleanRestaurantsArray = [
+  { 
+    apiKey: "aa1163f8eb68a8f7144247b91fbcb2f31932e981e6050b6c", 
+    city: "Denver", 
+    foodTypes: "Pizza", 
+    hours: { 
+      Friday: "11:00 AM - 3:00 AM", 
+      Monday: "11:00 AM - 3:00 AM", 
+      Saturday: "11:00 AM - 3:00 AM", 
+      Sunday: "11:00 AM - 3:00 AM", 
+      Thursday: "11:00 AM - 3:00 AM", 
+      Tuesday: "11:00 AM - 3:00 AM", 
+      Wednesday: "11:00 AM - 3:00 AM" 
+    }, 
+    logoUrl: "https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-s-wadsworth-21136_1407870747356.png", 
+    name: "Big Daddy's Pizza - S. Wadsworth", 
+    phone: "(303) 988-3697", 
+    state: "CO", 
+    streetAddress: "2772 S Wadsworth Blvd", 
+    url: "https://eatstreet.com/denver-co/restaurants/big-daddys-pizza-s-wadsworth", 
+    zip: "80227" 
+  }
+];
