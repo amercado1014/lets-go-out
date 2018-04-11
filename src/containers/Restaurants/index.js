@@ -3,6 +3,7 @@ import './styles.css';
 import { fetchMenu } from '../../api/apiCalls/fetchMenu';
 import { addMenu } from '../../actions';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import PropTypes from "prop-types";
 
 export class Restaurants extends Component {
@@ -11,6 +12,7 @@ export class Restaurants extends Component {
     try {
       const menu = await fetchMenu(menuKey);
       this.props.addMenu(menu);
+      this.props.history.push('/menu');
     } catch (error) {
       throw error;
     }
@@ -45,4 +47,4 @@ Restaurants.propTypes = {
   addMenu: PropTypes.func
 };
 
-export default connect(null, mapDispatchToProps)(Restaurants);
+export default withRouter(connect(null, mapDispatchToProps)(Restaurants));

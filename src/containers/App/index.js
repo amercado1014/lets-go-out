@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './styles.css';
-import { Route } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import Header from '../Header';
 import RestaurantsContainer from '../RestaurantsContainer';
+import Menu from '../Menu';
 import { fetchLocation } from '../../api/apiCalls/fetchLocation';
 import { fetchRestaurantsByLocation 
 } from '../../api/apiCalls/fetchRestaurantsByLocation';
@@ -37,6 +38,7 @@ export class App extends Component {
       <div className="App">
         <Header />
         <Route exact path='/' component={ RestaurantsContainer } />
+        <Route path='/menu' component={ Menu } />
       </div>
     );
   }
@@ -50,4 +52,4 @@ App.propTypes = {
   addRestaurants: PropTypes.func
 }; 
 
-export default connect(null, mapDispatchToProps)(App);
+export default withRouter(connect(null, mapDispatchToProps)(App));
