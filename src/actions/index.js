@@ -7,3 +7,8 @@ export const addMenu = menu => ({
   type: 'ADD_MENU',
   menu
 });
+
+export const addRestaurant = restaurant => ({
+  type: "ADD_RESTAURANT",
+  restaurant
+});
