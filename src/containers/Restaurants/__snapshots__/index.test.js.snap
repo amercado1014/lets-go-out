@@ -4,7 +4,7 @@ exports[`Restaurants should math the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Unknown
+  Symbol(enzyme.__unrendered__): <Restaurants
     restaurant={
         Object {
             "apiKey": "aa1163f8eb68a8f7144247b91fbcb2f39e65e39821ec08a9",
@@ -99,6 +99,7 @@ ShallowWrapper {
 </p>,
         ],
       ],
+      "onClick": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -369,6 +370,7 @@ ShallowWrapper {
 </p>,
           ],
         ],
+        "onClick": [Function],
       },
       "ref": null,
       "rendered": Array [
