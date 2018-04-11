@@ -44,7 +44,8 @@ export const mapDispatchToProps = dispatch => ({
 
 Restaurants.propTypes = {
   restaurant: PropTypes.object,
-  addMenu: PropTypes.func
+  addMenu: PropTypes.func,
+  history: PropTypes.object
 };
 
 export default withRouter(connect(null, mapDispatchToProps)(Restaurants));
