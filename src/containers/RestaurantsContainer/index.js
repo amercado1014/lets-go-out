@@ -1,12 +1,12 @@
 import React from 'react';
 import './styles.css';
-import Restaurant from '../Restaurants';
+import Restaurants from '../Restaurants';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 export const RestaurantsContainer = ({restaurants}) => {
   const displayRestaurants = restaurants.map(restaurant => {
-    return <Restaurant key={restaurant.name} restaurant={restaurant} />;
+    return <Restaurants key={restaurant.name} restaurant={restaurant} />;
   });
   
   return (
