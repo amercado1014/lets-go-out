@@ -19,20 +19,20 @@ export class Restaurants extends Component {
   }
 
   render() {
-    const { name, logoUrl, city, foodTypes, 
-      phone, state, streetAddress, hours, zip, apiKey } = this.props.restaurant;
-    const hoursInfo = Object.keys(hours).map((day, index) => {
-      return <p key={index}>{day}: {hours[day]}</p>;
-    });
+    const { name, logoUrl, foodTypes, apiKey, deliveryMin, 
+      offersDelivery, deliveryPrice } = this.props.restaurant;
+
     return (
       <div onClick={() => this.handleClick(apiKey)}>
         <h2>{name}</h2>
         <img src={logoUrl} alt="restaurant logo"/>
-        <p>{streetAddress}</p>
-        <p>{`${city} ${state} ${zip}`}</p>
-        <p>{phone}</p>
-        <p>{`Food types: ${foodTypes}`}</p>
-        {hoursInfo}
+        <p>{foodTypes}</p>
+        <p>Minimum: {deliveryMin || 'None'}</p>
+        {offersDelivery ?
+          <p>Delivery: {deliveryPrice || 'Free'}</p>
+          :
+          <p>Delivery: Takeout Only</p>
+        }
       </div>
     );
   }
