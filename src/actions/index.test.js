@@ -12,7 +12,7 @@ describe('actions', () => {
   });
 
   it('should create an action to add a menu', () => {
-    const menu = {items:[1, 2, 3]};
+    const menu = [1, 2, 3];
     const expectedAction = {
       type: 'ADD_MENU',
       menu
