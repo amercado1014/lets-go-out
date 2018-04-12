@@ -4,6 +4,7 @@ import { Route, withRouter } from 'react-router-dom';
 import Header from '../Header';
 import RestaurantsContainer from '../RestaurantsContainer';
 import Menu from '../Menu';
+import SignUp from '../SignUp';
 import { fetchLocation } from '../../api/apiCalls/fetchLocation';
 import { fetchRestaurantsByLocation 
 } from '../../api/apiCalls/fetchRestaurantsByLocation';
@@ -38,7 +39,9 @@ export class App extends Component {
       <div className="App">
         <Header />
         <Route exact path='/' component={ RestaurantsContainer } />
-        <Route path='/menu' component={ Menu } />
+        <Route exact path='/menu' component={ Menu } />
+        <Route exact path='/signup' component={ SignUp } />
+        {/* <Route exact path='/signin' component={ SignIn } /> */}
       </div>
     );
   }

@@ -48,7 +48,7 @@ export class Header extends Component {
           <button type="submit">Search</button>
         </form>
         <div className="navigation">
-          <Link to={routes.SIGN_IN}>Sign In</Link>
+          <Link to={routes.SIGN_UP}>Sign Up</Link>
         </div>
       </div>
     );
