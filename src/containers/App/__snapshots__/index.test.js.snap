@@ -26,6 +26,16 @@ ShallowWrapper {
           exact={true}
           path="/"
 />,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/menu"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/signup"
+/>,
       ],
       "className": "App",
     },
@@ -53,6 +63,32 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/menu",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/signup",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -68,6 +104,16 @@ ShallowWrapper {
             component={[Function]}
             exact={true}
             path="/"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/menu"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/signup"
 />,
         ],
         "className": "App",
@@ -91,6 +137,32 @@ ShallowWrapper {
             "component": [Function],
             "exact": true,
             "path": "/",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/menu",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/signup",
           },
           "ref": null,
           "rendered": null,

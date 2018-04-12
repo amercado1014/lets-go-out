@@ -50,54 +50,12 @@ ShallowWrapper {
           src="https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png"
 />,
         <p>
-          850 Wadsworth Blvd
+          Minimum: 
+          None
 </p>,
         <p>
-          Lakewood CO 80214
+          Delivery: Takeout Only
 </p>,
-        <p>
-          (303) 736-6090
-</p>,
-        <p>
-          Food types: Pizza
-</p>,
-        Array [
-          <p>
-            Monday
-            : 
-            11:00 AM - 3:00 AM
-</p>,
-          <p>
-            Saturday
-            : 
-            11:00 AM - 3:00 AM
-</p>,
-          <p>
-            Sunday
-            : 
-            11:00 AM - 3:00 AM
-</p>,
-          <p>
-            Wednesday
-            : 
-            11:00 AM - 3:00 AM
-</p>,
-          <p>
-            Tuesday
-            : 
-            11:00 AM - 3:00 AM
-</p>,
-          <p>
-            Friday
-            : 
-            11:00 AM - 3:00 AM
-</p>,
-          <p>
-            Thursday
-            : 
-            11:00 AM - 3:00 AM
-</p>,
-        ],
       ],
       "onClick": [Function],
     },
@@ -131,10 +89,16 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "850 Wadsworth Blvd",
+          "children": Array [
+            "Minimum: ",
+            "None",
+          ],
         },
         "ref": null,
-        "rendered": "850 Wadsworth Blvd",
+        "rendered": Array [
+          "Minimum: ",
+          "None",
+        ],
         "type": "p",
       },
       Object {
@@ -142,165 +106,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Lakewood CO 80214",
+          "children": "Delivery: Takeout Only",
         },
         "ref": null,
-        "rendered": "Lakewood CO 80214",
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "(303) 736-6090",
-        },
-        "ref": null,
-        "rendered": "(303) 736-6090",
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Food types: Pizza",
-        },
-        "ref": null,
-        "rendered": "Food types: Pizza",
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": "0",
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "Monday",
-            ": ",
-            "11:00 AM - 3:00 AM",
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          "Monday",
-          ": ",
-          "11:00 AM - 3:00 AM",
-        ],
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": "1",
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "Saturday",
-            ": ",
-            "11:00 AM - 3:00 AM",
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          "Saturday",
-          ": ",
-          "11:00 AM - 3:00 AM",
-        ],
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": "2",
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "Sunday",
-            ": ",
-            "11:00 AM - 3:00 AM",
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          "Sunday",
-          ": ",
-          "11:00 AM - 3:00 AM",
-        ],
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": "3",
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "Wednesday",
-            ": ",
-            "11:00 AM - 3:00 AM",
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          "Wednesday",
-          ": ",
-          "11:00 AM - 3:00 AM",
-        ],
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": "4",
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "Tuesday",
-            ": ",
-            "11:00 AM - 3:00 AM",
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          "Tuesday",
-          ": ",
-          "11:00 AM - 3:00 AM",
-        ],
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": "5",
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "Friday",
-            ": ",
-            "11:00 AM - 3:00 AM",
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          "Friday",
-          ": ",
-          "11:00 AM - 3:00 AM",
-        ],
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": "6",
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "Thursday",
-            ": ",
-            "11:00 AM - 3:00 AM",
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          "Thursday",
-          ": ",
-          "11:00 AM - 3:00 AM",
-        ],
+        "rendered": "Delivery: Takeout Only",
         "type": "p",
       },
     ],
@@ -321,54 +130,12 @@ ShallowWrapper {
             src="https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png"
 />,
           <p>
-            850 Wadsworth Blvd
+            Minimum: 
+            None
 </p>,
           <p>
-            Lakewood CO 80214
+            Delivery: Takeout Only
 </p>,
-          <p>
-            (303) 736-6090
-</p>,
-          <p>
-            Food types: Pizza
-</p>,
-          Array [
-            <p>
-              Monday
-              : 
-              11:00 AM - 3:00 AM
-</p>,
-            <p>
-              Saturday
-              : 
-              11:00 AM - 3:00 AM
-</p>,
-            <p>
-              Sunday
-              : 
-              11:00 AM - 3:00 AM
-</p>,
-            <p>
-              Wednesday
-              : 
-              11:00 AM - 3:00 AM
-</p>,
-            <p>
-              Tuesday
-              : 
-              11:00 AM - 3:00 AM
-</p>,
-            <p>
-              Friday
-              : 
-              11:00 AM - 3:00 AM
-</p>,
-            <p>
-              Thursday
-              : 
-              11:00 AM - 3:00 AM
-</p>,
-          ],
         ],
         "onClick": [Function],
       },
@@ -402,10 +169,16 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "850 Wadsworth Blvd",
+            "children": Array [
+              "Minimum: ",
+              "None",
+            ],
           },
           "ref": null,
-          "rendered": "850 Wadsworth Blvd",
+          "rendered": Array [
+            "Minimum: ",
+            "None",
+          ],
           "type": "p",
         },
         Object {
@@ -413,165 +186,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Lakewood CO 80214",
+            "children": "Delivery: Takeout Only",
           },
           "ref": null,
-          "rendered": "Lakewood CO 80214",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "(303) 736-6090",
-          },
-          "ref": null,
-          "rendered": "(303) 736-6090",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Food types: Pizza",
-          },
-          "ref": null,
-          "rendered": "Food types: Pizza",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": "0",
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Monday",
-              ": ",
-              "11:00 AM - 3:00 AM",
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            "Monday",
-            ": ",
-            "11:00 AM - 3:00 AM",
-          ],
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": "1",
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Saturday",
-              ": ",
-              "11:00 AM - 3:00 AM",
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            "Saturday",
-            ": ",
-            "11:00 AM - 3:00 AM",
-          ],
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": "2",
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Sunday",
-              ": ",
-              "11:00 AM - 3:00 AM",
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            "Sunday",
-            ": ",
-            "11:00 AM - 3:00 AM",
-          ],
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": "3",
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Wednesday",
-              ": ",
-              "11:00 AM - 3:00 AM",
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            "Wednesday",
-            ": ",
-            "11:00 AM - 3:00 AM",
-          ],
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": "4",
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Tuesday",
-              ": ",
-              "11:00 AM - 3:00 AM",
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            "Tuesday",
-            ": ",
-            "11:00 AM - 3:00 AM",
-          ],
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": "5",
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Friday",
-              ": ",
-              "11:00 AM - 3:00 AM",
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            "Friday",
-            ": ",
-            "11:00 AM - 3:00 AM",
-          ],
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": "6",
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Thursday",
-              ": ",
-              "11:00 AM - 3:00 AM",
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            "Thursday",
-            ": ",
-            "11:00 AM - 3:00 AM",
-          ],
+          "rendered": "Delivery: Takeout Only",
           "type": "p",
         },
       ],
