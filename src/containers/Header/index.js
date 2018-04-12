@@ -5,6 +5,8 @@ import { fetchRestaurantsBySearch
 import { restaurantsCleaner } from '../../api/helpers/restaurantsCleaner';
 import { addRestaurants } from '../../actions/';
 import { connect } from 'react-redux';
+import * as routes from '../../constants/routes';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 export class Header extends Component {
@@ -45,6 +47,9 @@ export class Header extends Component {
             onChange={this.handleChange}/>
           <button type="submit">Search</button>
         </form>
+        <div className="navigation">
+          <Link to={routes.SIGN_IN}>Sign In</Link>
+        </div>
       </div>
     );
   }
