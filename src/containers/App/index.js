@@ -26,15 +26,15 @@ export class App extends Component {
   }
 
   async componentDidMount() {
-    // const { addRestaurants } = this.props;
-    // try {
-    //   const location = await fetchLocation();
-    //   const restaurants = await fetchRestaurantsByLocation(location);
-    //   const cleanRestaurants = restaurantsCleaner(restaurants);
-    //   addRestaurants(cleanRestaurants);
-    // } catch (error) {
-    //   this.setState({error});
-    // }
+    const { addRestaurants } = this.props;
+    try {
+      const location = await fetchLocation();
+      const restaurants = await fetchRestaurantsByLocation(location);
+      const cleanRestaurants = restaurantsCleaner(restaurants);
+      addRestaurants(cleanRestaurants);
+    } catch (error) {
+      this.setState({error});
+    }
     
     firebase.auth.onAuthStateChanged(authUser => {
       authUser 

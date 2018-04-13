@@ -3,7 +3,7 @@ import './styles.css';
 import { fetchRestaurantsBySearch 
 } from '../../api/apiCalls/fetchRestaurantsBySearch';
 import { restaurantsCleaner } from '../../api/helpers/restaurantsCleaner';
-import { addRestaurants } from '../../actions/';
+import { addRestaurants, locationOff } from '../../actions/';
 import { connect } from 'react-redux';
 import * as routes from '../../constants/routes';
 import { Link } from 'react-router-dom';
@@ -34,6 +34,7 @@ export class Header extends Component {
     } catch (error) {
       throw error.message;
     }
+    this.props.locationOff(false);
   }
 
   render() {
@@ -61,12 +62,14 @@ export class Header extends Component {
 }
 
 export const mapDispatchToProps = dispatch => ({
-  addRestaurants: restaurants => dispatch(addRestaurants(restaurants))
+  addRestaurants: restaurants => dispatch(addRestaurants(restaurants)),
+  locationOff: boolean => dispatch(locationOff(boolean))
 });
 
 Header.propTypes = {
   addRestaurants: PropTypes.func,
-  authUser: PropTypes.object
+  authUser: PropTypes.object,
+  locationOff: PropTypes.func
 };
 
 export default connect(null, mapDispatchToProps)(Header);
