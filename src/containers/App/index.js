@@ -21,7 +21,8 @@ export class App extends Component {
 
     this.state = {
       error: '',
-      authUser: null
+      authUser: null,
+      locationOff: false
     };
   }
 
@@ -35,19 +36,32 @@ export class App extends Component {
     } catch (error) {
       this.setState({error});
     }
-
+    
     firebase.auth.onAuthStateChanged(authUser => {
       authUser 
         ? this.setState(() => ({ authUser }))
         : this.setState(() => ({ authUser: null }));
     });
+    
+    this.updateLocationMessage();
+  }
+  
+  updateLocationMessage = () => {
+    const { restaurants } = this.props;
+    setTimeout(() => {
+      if (!restaurants.length) {
+        this.setState({locationOff: true});
+      }
+    }, 5000);
   }
 
   render() {
+    const { authUser, locationOff } = this.state;
     return (
       <div className="App">
-        <Header authUser={this.state.authUser} />
-        <Route exact path='/' component={ RestaurantsContainer } />
+        <Header authUser={authUser} />
+        <Route exact path='/' render={ () => 
+          <RestaurantsContainer locationOff={locationOff} /> } />
         <Route exact path='/menu' component={ Menu } />
         <Route exact path='/signin' component={ SignIn } />
         <Route exact path='/signup' component={ SignUp} />
@@ -56,12 +70,17 @@ export class App extends Component {
   }
 }
 
+export const mapStateToProps = state => ({
+  restaurants: state.restaurants
+});
+
 export const mapDispatchToProps = dispatch => ({
   addRestaurants: restaurants => dispatch(addRestaurants(restaurants))
 });
 
 App.propTypes = {
-  addRestaurants: PropTypes.func
+  addRestaurants: PropTypes.func,
+  restaurants: PropTypes.array
 }; 
 
-export default withRouter(connect(null, mapDispatchToProps)(App));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
