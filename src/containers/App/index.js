@@ -60,9 +60,9 @@ export class App extends Component {
       <div className="App">
         <Header authUser={authUser} />
         <Route exact path='/' component={RestaurantsContainer} />
-        <Route exact path='/menu' component={ Menu } />
-        <Route exact path='/signin' component={ SignIn } />
-        <Route exact path='/signup' component={ SignUp} />
+        <Route exact path='/menu' component={Menu} />
+        <Route exact path='/signin' component={SignIn} />
+        <Route exact path='/signup' component={SignUp} />
       </div>
     );
   }
