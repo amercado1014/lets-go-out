@@ -10,7 +10,7 @@ import { fetchLocation } from '../../api/apiCalls/fetchLocation';
 import { fetchRestaurantsByLocation 
 } from '../../api/apiCalls/fetchRestaurantsByLocation';
 import { restaurantsCleaner } from '../../api/helpers/restaurantsCleaner';
-import { addRestaurants } from '../../actions';
+import { addRestaurants, locationOff } from '../../actions';
 import { connect } from 'react-redux';
 import { firebase } from '../../firebase';
 import PropTypes from 'prop-types';
@@ -21,21 +21,20 @@ export class App extends Component {
 
     this.state = {
       error: '',
-      authUser: null,
-      locationOff: false
+      authUser: null
     };
   }
 
   async componentDidMount() {
-    const { addRestaurants } = this.props;
-    try {
-      const location = await fetchLocation();
-      const restaurants = await fetchRestaurantsByLocation(location);
-      const cleanRestaurants = restaurantsCleaner(restaurants);
-      addRestaurants(cleanRestaurants);
-    } catch (error) {
-      this.setState({error});
-    }
+    // const { addRestaurants } = this.props;
+    // try {
+    //   const location = await fetchLocation();
+    //   const restaurants = await fetchRestaurantsByLocation(location);
+    //   const cleanRestaurants = restaurantsCleaner(restaurants);
+    //   addRestaurants(cleanRestaurants);
+    // } catch (error) {
+    //   this.setState({error});
+    // }
     
     firebase.auth.onAuthStateChanged(authUser => {
       authUser 
@@ -47,21 +46,21 @@ export class App extends Component {
   }
   
   updateLocationMessage = () => {
-    const { restaurants } = this.props;
+    const { restaurants, locationOff } = this.props;
     setTimeout(() => {
       if (!restaurants.length) {
-        this.setState({locationOff: true});
+        locationOff(true);
       }
     }, 5000);
   }
 
   render() {
-    const { authUser, locationOff } = this.state;
+    const { authUser } = this.state;
     return (
       <div className="App">
         <Header authUser={authUser} />
         <Route exact path='/' render={ () => 
-          <RestaurantsContainer locationOff={locationOff} /> } />
+          <RestaurantsContainer /> } />
         <Route exact path='/menu' component={ Menu } />
         <Route exact path='/signin' component={ SignIn } />
         <Route exact path='/signup' component={ SignUp} />
@@ -75,12 +74,14 @@ export const mapStateToProps = state => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  addRestaurants: restaurants => dispatch(addRestaurants(restaurants))
+  addRestaurants: restaurants => dispatch(addRestaurants(restaurants)),
+  locationOff: boolean => dispatch(locationOff(boolean))
 });
 
 App.propTypes = {
   addRestaurants: PropTypes.func,
-  restaurants: PropTypes.array
+  restaurants: PropTypes.array,
+  locationOff: PropTypes.func
 }; 
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

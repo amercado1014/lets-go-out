@@ -12,3 +12,8 @@ export const addRestaurant = restaurant => ({
   type: "ADD_RESTAURANT",
   restaurant
 });
+
+export const locationOff = boolean => ({
+  type: 'LOCATION_OFF',
+  boolean
+});
