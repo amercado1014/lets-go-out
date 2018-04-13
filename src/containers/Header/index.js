@@ -38,7 +38,6 @@ export class Header extends Component {
 
   render() {
     const { authUser } = this.props;
-    console.log(authUser);
     return (
       <div>
         <h1>{ "Let's Order Out" }</h1>
@@ -66,7 +65,8 @@ export const mapDispatchToProps = dispatch => ({
 });
 
 Header.propTypes = {
-  addRestaurants: PropTypes.func
+  addRestaurants: PropTypes.func,
+  authUser: PropTypes.object
 };
 
 export default connect(null, mapDispatchToProps)(Header);
