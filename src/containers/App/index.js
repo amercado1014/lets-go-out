@@ -42,10 +42,10 @@ export class App extends Component {
         : this.setState(() => ({ authUser: null }));
     });
     
-    this.updateLocationMessage();
+    this.updateLocationStatus();
   }
   
-  updateLocationMessage = () => {
+  updateLocationStatus = () => {
     const { restaurants, locationOff } = this.props;
     setTimeout(() => {
       if (!restaurants.length) {
@@ -59,8 +59,7 @@ export class App extends Component {
     return (
       <div className="App">
         <Header authUser={authUser} />
-        <Route exact path='/' render={ () => 
-          <RestaurantsContainer /> } />
+        <Route exact path='/' component={RestaurantsContainer} />
         <Route exact path='/menu' component={ Menu } />
         <Route exact path='/signin' component={ SignIn } />
         <Route exact path='/signup' component={ SignUp} />
