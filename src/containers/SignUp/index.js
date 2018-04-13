@@ -95,4 +95,11 @@ export class SignUp extends Component {
    }
 }
 
+export const SignUpLink = () => (
+  <p>
+    {`Don't have an account?`} <Link to={routes.SIGN_UP}>Sign Up</Link>
+  </p>
+);
+
 export default withRouter(SignUp);
+

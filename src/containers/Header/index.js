@@ -7,6 +7,7 @@ import { addRestaurants } from '../../actions/';
 import { connect } from 'react-redux';
 import * as routes from '../../constants/routes';
 import { Link } from 'react-router-dom';
+import SignOut from '../../components/SignOut';
 import PropTypes from 'prop-types';
 
 export class Header extends Component {
@@ -48,7 +49,8 @@ export class Header extends Component {
           <button type="submit">Search</button>
         </form>
         <div className="navigation">
-          <Link to={routes.SIGN_UP}>Sign Up</Link>
+          <Link to={routes.SIGN_IN}>Sign In</Link>
+          {SignOut()}
         </div>
       </div>
     );
