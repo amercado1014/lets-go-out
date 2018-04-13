@@ -37,6 +37,8 @@ export class Header extends Component {
   }
 
   render() {
+    const { authUser } = this.props;
+    console.log(authUser);
     return (
       <div>
         <h1>{ "Let's Order Out" }</h1>
@@ -49,8 +51,10 @@ export class Header extends Component {
           <button type="submit">Search</button>
         </form>
         <div className="navigation">
-          <Link to={routes.SIGN_IN}>Sign In</Link>
-          {SignOut()}
+          {authUser 
+            ? <SignOut />
+            : <Link to={routes.SIGN_IN}>Sign In</Link>
+          }
         </div>
       </div>
     );
