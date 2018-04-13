@@ -11,10 +11,13 @@ jest.mock('../../api/helpers/restaurantsCleaner');
 describe('Header', () => {
   let wrapper;
   let mockAddRestaurants;
+  let mockLocationOff;
 
   beforeEach(() => {
     mockAddRestaurants = jest.fn();
-    wrapper = shallow(<Header addRestaurants={mockAddRestaurants} />);
+    mockLocationOff = jest.fn();
+    wrapper = shallow(<Header addRestaurants={mockAddRestaurants} 
+      locationOff={mockLocationOff} />);
   });
 
   it('should math the snapshot', () => {

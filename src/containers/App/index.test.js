@@ -1,5 +1,5 @@
 import React from 'react';
-import { App } from '../App';
+import { App, mapDispatchToProps } from '../App';
 import { shallow } from 'enzyme';
 import { fetchLocation } from '../../api/apiCalls/fetchLocation';
 import { fetchRestaurantsByLocation 
@@ -13,10 +13,13 @@ jest.mock('../../api/helpers/restaurantsCleaner');
 describe('App', () => {
   let wrapper;
   let mockAddRestaurants;
+  let mockLocationOff;
 
   beforeEach(() => {
     mockAddRestaurants = jest.fn();
-    wrapper = shallow(<App addRestaurants={mockAddRestaurants} />);
+    mockLocationOff = jest.fn();
+    wrapper = shallow(<App addRestaurants={mockAddRestaurants} 
+      locationOff={mockLocationOff} />);
   });
 
   it('should math the snapshot', () => {
@@ -41,5 +44,12 @@ describe('App', () => {
   it.skip('should call addRestaurants on componentDidMount', () => {
     wrapper.instance().componentDidMount();
     expect(mockAddRestaurants).toHaveBeenCalled();
+  });
+
+  it('should call dispatch on MDTP for addRestaurants', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+    mapped.addRestaurants();
+    expect(mockDispatch).toHaveBeenCalled();
   });
 });
