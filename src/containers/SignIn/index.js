@@ -65,7 +65,7 @@ export class SignIn extends Component {
           Sign In
         </button>
         {error && <p>{error.message}</p>}
-        {SignUpLink()}
+        <SignUpLink />
       </form>
     );
   }
