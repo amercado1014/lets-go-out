@@ -43,9 +43,9 @@ ShallowWrapper {
 >
           <Link
                     replace={false}
-                    to="/signup"
+                    to="/signin"
           >
-                    Sign Up
+                    Sign In
           </Link>
 </div>,
       ],
@@ -121,9 +121,9 @@ ShallowWrapper {
         "props": Object {
           "children": <Link
             replace={false}
-            to="/signup"
+            to="/signin"
 >
-            Sign Up
+            Sign In
 </Link>,
           "className": "navigation",
         },
@@ -133,12 +133,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": "Sign Up",
+            "children": "Sign In",
             "replace": false,
-            "to": "/signup",
+            "to": "/signin",
           },
           "ref": null,
-          "rendered": "Sign Up",
+          "rendered": "Sign In",
           "type": [Function],
         },
         "type": "div",
@@ -176,9 +176,9 @@ ShallowWrapper {
 >
             <Link
                         replace={false}
-                        to="/signup"
+                        to="/signin"
             >
-                        Sign Up
+                        Sign In
             </Link>
 </div>,
         ],
@@ -254,9 +254,9 @@ ShallowWrapper {
           "props": Object {
             "children": <Link
               replace={false}
-              to="/signup"
+              to="/signin"
 >
-              Sign Up
+              Sign In
 </Link>,
             "className": "navigation",
           },
@@ -266,12 +266,12 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": "Sign Up",
+              "children": "Sign In",
               "replace": false,
-              "to": "/signup",
+              "to": "/signin",
             },
             "ref": null,
-            "rendered": "Sign Up",
+            "rendered": "Sign In",
             "type": [Function],
           },
           "type": "div",

@@ -9,6 +9,8 @@ ShallowWrapper {
         Object {
             "apiKey": "aa1163f8eb68a8f7144247b91fbcb2f39e65e39821ec08a9",
             "city": "Lakewood",
+            "deliveryMin": 12,
+            "deliveryPrice": 3.5,
             "foodTypes": "Pizza",
             "hours": Object {
               "Friday": "11:00 AM - 3:00 AM",
@@ -20,7 +22,9 @@ ShallowWrapper {
               "Wednesday": "11:00 AM - 3:00 AM",
             },
             "logoUrl": "https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png",
+            "minFreeDelivery": 0,
             "name": "Big Daddy's Pizza - Lakewood",
+            "offersDelivery": true,
             "phone": "(303) 736-6090",
             "state": "CO",
             "streetAddress": "850 Wadsworth Blvd",
@@ -51,10 +55,11 @@ ShallowWrapper {
 />,
         <p>
           Minimum: 
-          None
+          12
 </p>,
         <p>
-          Delivery: Takeout Only
+          Delivery: 
+          3.5
 </p>,
       ],
       "onClick": [Function],
@@ -91,13 +96,13 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             "Minimum: ",
-            "None",
+            12,
           ],
         },
         "ref": null,
         "rendered": Array [
           "Minimum: ",
-          "None",
+          12,
         ],
         "type": "p",
       },
@@ -106,10 +111,16 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Delivery: Takeout Only",
+          "children": Array [
+            "Delivery: ",
+            3.5,
+          ],
         },
         "ref": null,
-        "rendered": "Delivery: Takeout Only",
+        "rendered": Array [
+          "Delivery: ",
+          3.5,
+        ],
         "type": "p",
       },
     ],
@@ -131,10 +142,11 @@ ShallowWrapper {
 />,
           <p>
             Minimum: 
-            None
+            12
 </p>,
           <p>
-            Delivery: Takeout Only
+            Delivery: 
+            3.5
 </p>,
         ],
         "onClick": [Function],
@@ -171,13 +183,13 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               "Minimum: ",
-              "None",
+              12,
             ],
           },
           "ref": null,
           "rendered": Array [
             "Minimum: ",
-            "None",
+            12,
           ],
           "type": "p",
         },
@@ -186,10 +198,16 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Delivery: Takeout Only",
+            "children": Array [
+              "Delivery: ",
+              3.5,
+            ],
           },
           "ref": null,
-          "rendered": "Delivery: Takeout Only",
+          "rendered": Array [
+            "Delivery: ",
+            3.5,
+          ],
           "type": "p",
         },
       ],
