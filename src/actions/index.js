@@ -28,7 +28,7 @@ export const addFavorite = favorite => ({
   favorite
 });
 
-export const removeFavorite = favorite => ({
+export const removeFavorite = apiKey => ({
   type: 'REMOVE_FAVORITE',
-  favorite
+  apiKey
 });
