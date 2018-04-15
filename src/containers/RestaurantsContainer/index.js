@@ -4,11 +4,23 @@ import Restaurants from '../Restaurants';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-export const RestaurantsContainer = ({restaurants, locationStatus}) => {
+export const RestaurantsContainer = ({restaurants, locationStatus, 
+  favorites}) => {
   const displayRestaurants = restaurants.map(restaurant => {
-    return <Restaurants key={restaurant.name} restaurant={restaurant} />;
+    let isFavorite = false;
+
+    favorites.forEach(favorite => {
+      if (favorite.apiKey === restaurant.apiKey) {
+        isFavorite = true;
+      }
+    });
+
+    return <Restaurants 
+      key={restaurant.name} 
+      restaurant={restaurant} 
+      isFavorite={isFavorite} />;
   });
-  
+ 
   return (
     <div>
       {locationStatus &&
@@ -22,12 +34,14 @@ export const RestaurantsContainer = ({restaurants, locationStatus}) => {
 
 export const mapStateToProps = state => ({
   restaurants: state.restaurants,
-  locationStatus: state.locationStatus
+  locationStatus: state.locationStatus,
+  favorites: state.favorites
 });
 
 RestaurantsContainer.propTypes = {
   restaurants: PropTypes.array,
-  locationStatus: PropTypes.bool
+  locationStatus: PropTypes.bool,
+  favorites: PropTypes.array
 };
 
 export default connect(mapStateToProps)(RestaurantsContainer);

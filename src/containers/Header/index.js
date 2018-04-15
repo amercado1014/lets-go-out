@@ -7,7 +7,7 @@ import { addRestaurants, locationOff } from '../../actions/';
 import { connect } from 'react-redux';
 import * as routes from '../../constants/routes';
 import { Link } from 'react-router-dom';
-import SignOut from '../../components/SignOut';
+import SignOut from '../SignOut';
 import PropTypes from 'prop-types';
 
 export class Header extends Component {
@@ -52,7 +52,10 @@ export class Header extends Component {
         </form>
         <div className="navigation">
           {authUser 
-            ? <SignOut />
+            ? <div>
+              <SignOut />
+              <Link to='/favorites'>Favorites</Link>
+            </div>
             : <Link to={routes.SIGN_IN}>Sign In</Link>
           }
         </div>
@@ -60,6 +63,10 @@ export class Header extends Component {
     );
   }
 }
+
+export const mapStateToProps = state => ({
+  authUser: state.authUser
+});
 
 export const mapDispatchToProps = dispatch => ({
   addRestaurants: restaurants => dispatch(addRestaurants(restaurants)),
@@ -72,4 +79,4 @@ Header.propTypes = {
   locationOff: PropTypes.func
 };
 
-export default connect(null, mapDispatchToProps)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
