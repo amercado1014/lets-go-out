@@ -8,9 +8,10 @@ import PropTypes from "prop-types";
 
 export class Restaurants extends Component {
 
-  handleClick = async (menuKey, restaurant) => {
+  handleClick = async () => {
+    const { restaurant } = this.props;
     try {
-      const menu = await fetchMenu(menuKey);
+      const menu = await fetchMenu(restaurant.apiKey);
       this.props.addMenu(menu);
       this.props.addRestaurant(restaurant);
       this.props.history.push('/menu');
@@ -20,8 +21,10 @@ export class Restaurants extends Component {
   }
 
   addFavorite = () => {
-    const { restaurant, addFavorite } = this.props;
-    addFavorite(restaurant);
+    const { restaurant, addFavorite, isFavorite } = this.props;
+    if (!isFavorite) {
+      addFavorite(restaurant);
+    }
   }
 
   handleFavorite = () => {
@@ -29,13 +32,13 @@ export class Restaurants extends Component {
   }
 
   render() {
-    const { name, logoUrl, apiKey, deliveryMin, 
+    const { name, logoUrl, deliveryMin, 
       offersDelivery, deliveryPrice } = this.props.restaurant;
-    const { authUser, restaurant } = this.props;
+    const { authUser } = this.props;
 
     return (
       <div>
-        <div onClick={() => this.handleClick(apiKey, restaurant)}>
+        <div onClick={this.handleClick}>
           <h2>{name}</h2>
           <img src={logoUrl} alt="restaurant logo"/>
           <p>Minimum: {deliveryMin || 'None'}</p>
@@ -70,7 +73,8 @@ Restaurants.propTypes = {
   history: PropTypes.object,
   addRestaurant: PropTypes.func,
   authUser: PropTypes.object,
-  addFavorite: PropTypes.func
+  addFavorite: PropTypes.func,
+  isFavorite: PropTypes.bool
 };
 
 export default 
