@@ -38,10 +38,13 @@ export class Header extends Component {
   }
 
   render() {
-    const { authUser } = this.props;
+    const { authUser, restaurants } = this.props;
     return (
       <div>
         <h1>{ "Let's Order Out" }</h1>
+        {restaurants.length > 0 &&
+        <p>{restaurants[0].city}, {restaurants[0].state}</p>
+        }
         <form onSubmit={this.handleSubmit}>
           <input 
             type="text"
@@ -65,7 +68,8 @@ export class Header extends Component {
 }
 
 export const mapStateToProps = state => ({
-  authUser: state.authUser
+  authUser: state.authUser,
+  restaurants: state.restaurants
 });
 
 export const mapDispatchToProps = dispatch => ({
@@ -76,7 +80,8 @@ export const mapDispatchToProps = dispatch => ({
 Header.propTypes = {
   addRestaurants: PropTypes.func,
   authUser: PropTypes.object,
-  locationOff: PropTypes.func
+  locationOff: PropTypes.func,
+  restaurants: PropTypes.array
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
