@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './styles.css';
 import { fetchMenu } from '../../api/apiCalls/fetchMenu';
-import { addMenu, addRestaurant, addFavorite } from '../../actions';
+import { addMenu, addRestaurant, 
+  addFavorite, removeFavorite } from '../../actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import PropTypes from "prop-types";
@@ -9,12 +10,12 @@ import PropTypes from "prop-types";
 export class Restaurants extends Component {
 
   handleClick = async () => {
-    const { restaurant } = this.props;
+    const { restaurant, addMenu, addRestaurant, history } = this.props;
     try {
       const menu = await fetchMenu(restaurant.apiKey);
-      this.props.addMenu(menu);
-      this.props.addRestaurant(restaurant);
-      this.props.history.push('/menu');
+      addMenu(menu);
+      addRestaurant(restaurant);
+      history.push('/menu');
     } catch (error) {
       throw error;
     }
@@ -22,13 +23,23 @@ export class Restaurants extends Component {
 
   addFavorite = () => {
     const { restaurant, addFavorite, isFavorite } = this.props;
+
     if (!isFavorite) {
       addFavorite(restaurant);
     }
   }
 
+  removeFavorite = () => {
+    const { restaurant, removeFavorite, isFavorite } = this.props;
+
+    if (isFavorite) {
+      removeFavorite(restaurant.apiKey);
+    }
+  }
+
   handleFavorite = () => {
     this.addFavorite();
+    this.removeFavorite();
   }
 
   render() {
@@ -64,7 +75,8 @@ export const mapStateToProps = state => ({
 export const mapDispatchToProps = dispatch => ({
   addMenu: menu => dispatch(addMenu(menu)),
   addRestaurant: restaurant => dispatch(addRestaurant(restaurant)),
-  addFavorite: restaurant => dispatch(addFavorite(restaurant)) 
+  addFavorite: restaurant => dispatch(addFavorite(restaurant)),
+  removeFavorite: apiKey => dispatch(removeFavorite(apiKey)) 
 });
 
 Restaurants.propTypes = {
@@ -74,7 +86,8 @@ Restaurants.propTypes = {
   addRestaurant: PropTypes.func,
   authUser: PropTypes.object,
   addFavorite: PropTypes.func,
-  isFavorite: PropTypes.bool
+  isFavorite: PropTypes.bool,
+  removeFavorite: PropTypes.func
 };
 
 export default 
