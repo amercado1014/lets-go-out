@@ -46,23 +46,27 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h2>
-          Big Daddy's Pizza - Lakewood
-</h2>,
-        <img
-          alt="restaurant logo"
-          src="https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png"
-/>,
-        <p>
-          Minimum: 
-          12
-</p>,
-        <p>
-          Delivery: 
-          3.5
-</p>,
+        <div
+          onClick={[Function]}
+>
+          <h2>
+                    Big Daddy's Pizza - Lakewood
+          </h2>
+          <img
+                    alt="restaurant logo"
+                    src="https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png"
+          />
+          <p>
+                    Minimum: 
+                    12
+          </p>
+          <p>
+                    Delivery: 
+                    3.5
+          </p>
+</div>,
+        undefined,
       ],
-      "onClick": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -71,58 +75,88 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Big Daddy's Pizza - Lakewood",
-        },
-        "ref": null,
-        "rendered": "Big Daddy's Pizza - Lakewood",
-        "type": "h2",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "alt": "restaurant logo",
-          "src": "https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "img",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
           "children": Array [
-            "Minimum: ",
-            12,
+            <h2>
+              Big Daddy's Pizza - Lakewood
+</h2>,
+            <img
+              alt="restaurant logo"
+              src="https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png"
+/>,
+            <p>
+              Minimum: 
+              12
+</p>,
+            <p>
+              Delivery: 
+              3.5
+</p>,
           ],
+          "onClick": [Function],
         },
         "ref": null,
         "rendered": Array [
-          "Minimum: ",
-          12,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Big Daddy's Pizza - Lakewood",
+            },
+            "ref": null,
+            "rendered": "Big Daddy's Pizza - Lakewood",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "restaurant logo",
+              "src": "https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Minimum: ",
+                12,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Minimum: ",
+              12,
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Delivery: ",
+                3.5,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Delivery: ",
+              3.5,
+            ],
+            "type": "p",
+          },
         ],
-        "type": "p",
+        "type": "div",
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "Delivery: ",
-            3.5,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          "Delivery: ",
-          3.5,
-        ],
-        "type": "p",
-      },
+      undefined,
     ],
     "type": "div",
   },
@@ -133,23 +167,27 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h2>
-            Big Daddy's Pizza - Lakewood
-</h2>,
-          <img
-            alt="restaurant logo"
-            src="https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png"
-/>,
-          <p>
-            Minimum: 
-            12
-</p>,
-          <p>
-            Delivery: 
-            3.5
-</p>,
+          <div
+            onClick={[Function]}
+>
+            <h2>
+                        Big Daddy's Pizza - Lakewood
+            </h2>
+            <img
+                        alt="restaurant logo"
+                        src="https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png"
+            />
+            <p>
+                        Minimum: 
+                        12
+            </p>
+            <p>
+                        Delivery: 
+                        3.5
+            </p>
+</div>,
+          undefined,
         ],
-        "onClick": [Function],
       },
       "ref": null,
       "rendered": Array [
@@ -158,58 +196,88 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Big Daddy's Pizza - Lakewood",
-          },
-          "ref": null,
-          "rendered": "Big Daddy's Pizza - Lakewood",
-          "type": "h2",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "alt": "restaurant logo",
-            "src": "https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "img",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
             "children": Array [
-              "Minimum: ",
-              12,
+              <h2>
+                Big Daddy's Pizza - Lakewood
+</h2>,
+              <img
+                alt="restaurant logo"
+                src="https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png"
+/>,
+              <p>
+                Minimum: 
+                12
+</p>,
+              <p>
+                Delivery: 
+                3.5
+</p>,
             ],
+            "onClick": [Function],
           },
           "ref": null,
           "rendered": Array [
-            "Minimum: ",
-            12,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Big Daddy's Pizza - Lakewood",
+              },
+              "ref": null,
+              "rendered": "Big Daddy's Pizza - Lakewood",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "restaurant logo",
+                "src": "https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Minimum: ",
+                  12,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Minimum: ",
+                12,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Delivery: ",
+                  3.5,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Delivery: ",
+                3.5,
+              ],
+              "type": "p",
+            },
           ],
-          "type": "p",
+          "type": "div",
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Delivery: ",
-              3.5,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            "Delivery: ",
-            3.5,
-          ],
-          "type": "p",
-        },
+        undefined,
       ],
       "type": "div",
     },
