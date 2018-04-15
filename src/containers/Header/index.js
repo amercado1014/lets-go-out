@@ -52,7 +52,10 @@ export class Header extends Component {
         </form>
         <div className="navigation">
           {authUser 
-            ? <SignOut />
+            ? <div>
+              <SignOut />
+              <Link to='/favorites'>Favorites</Link>
+            </div>
             : <Link to={routes.SIGN_IN}>Sign In</Link>
           }
         </div>
