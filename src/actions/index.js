@@ -32,3 +32,7 @@ export const removeFavorite = apiKey => ({
   type: 'REMOVE_FAVORITE',
   apiKey
 });
+
+export const resetFavorites = () => ({
+  type: 'RESET_FAVORITES'
+});

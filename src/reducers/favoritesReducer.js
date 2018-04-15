@@ -4,6 +4,8 @@ const favoritesReducer = (state = [], action) => {
     return [...state, action.favorite];
   case 'REMOVE_FAVORITE':
     return state.filter(restaurant => restaurant.apiKey !== action.apiKey);
+  case 'RESET_FAVORITES':
+    return [];
   default:
     return state;
   }
