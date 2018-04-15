@@ -4,6 +4,7 @@ import { shallow } from 'enzyme';
 import { fetchRestaurantsBySearch 
 } from '../../api/apiCalls/fetchRestaurantsBySearch';
 import { restaurantsCleaner } from '../../api/helpers/restaurantsCleaner';
+import { mockRestaurants } from '../../mockData/mockData';
 
 jest.mock('../../api/apiCalls/fetchRestaurantsBySearch');
 jest.mock('../../api/helpers/restaurantsCleaner');
@@ -17,7 +18,8 @@ describe('Header', () => {
     mockAddRestaurants = jest.fn();
     mockLocationOff = jest.fn();
     wrapper = shallow(<Header addRestaurants={mockAddRestaurants} 
-      locationOff={mockLocationOff} />);
+      locationOff={mockLocationOff} 
+      restaurants={mockRestaurants} />);
   });
 
   it('should math the snapshot', () => {
