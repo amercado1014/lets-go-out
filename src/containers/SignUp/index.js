@@ -25,7 +25,6 @@ export class SignUp extends Component {
    handleSubmit = event => {
      event.preventDefault();
      const {
-       username,
        email,
        passwordOne
      } = this.state;
