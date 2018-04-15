@@ -22,6 +22,7 @@ export class Restaurants extends Component {
   render() {
     const { name, logoUrl, apiKey, deliveryMin, 
       offersDelivery, deliveryPrice } = this.props.restaurant;
+    const { authUser } = this.props;
 
     return (
       <div onClick={() => this.handleClick(apiKey, this.props.restaurant)}>
@@ -33,10 +34,17 @@ export class Restaurants extends Component {
           :
           <p>Delivery: Takeout Only</p>
         }
+        {authUser && 
+          <button>Favorite</button>
+        }
       </div>
     );
   }
 }
+
+export const mapStateToProps = state => ({
+  authUser: state.authUser
+});
 
 export const mapDispatchToProps = dispatch => ({
   addMenu: menu => dispatch(addMenu(menu)),
@@ -47,7 +55,9 @@ Restaurants.propTypes = {
   restaurant: PropTypes.object,
   addMenu: PropTypes.func,
   history: PropTypes.object,
-  addRestaurant: PropTypes.func
+  addRestaurant: PropTypes.func,
+  authUser: PropTypes.object
 };
 
-export default withRouter(connect(null, mapDispatchToProps)(Restaurants));
+export default 
+withRouter(connect(mapStateToProps, mapDispatchToProps)(Restaurants));
