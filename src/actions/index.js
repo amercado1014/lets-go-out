@@ -17,3 +17,8 @@ export const locationOff = boolean => ({
   type: 'LOCATION_OFF',
   boolean
 });
+
+export const addUser = user => ({
+  type: 'ADD_USER',
+  user
+});

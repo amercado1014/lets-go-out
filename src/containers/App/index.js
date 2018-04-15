@@ -11,7 +11,7 @@ import { fetchLocation } from '../../api/apiCalls/fetchLocation';
 import { fetchRestaurantsByLocation 
 } from '../../api/apiCalls/fetchRestaurantsByLocation';
 import { restaurantsCleaner } from '../../api/helpers/restaurantsCleaner';
-import { addRestaurants, locationOff } from '../../actions';
+import { addRestaurants, locationOff, addUser } from '../../actions';
 import { connect } from 'react-redux';
 import { firebase } from '../../firebase';
 import PropTypes from 'prop-types';
@@ -21,13 +21,12 @@ export class App extends Component {
     super(props);
 
     this.state = {
-      error: '',
-      authUser: null
+      error: ''
     };
   }
 
   async componentDidMount() {
-    const { addRestaurants } = this.props;
+    const { addRestaurants, addUser } = this.props;
     try {
       const location = await fetchLocation();
       const restaurants = await fetchRestaurantsByLocation(location);
@@ -39,8 +38,8 @@ export class App extends Component {
     
     firebase.auth.onAuthStateChanged(authUser => {
       authUser 
-        ? this.setState(() => ({ authUser }))
-        : this.setState(() => ({ authUser: null }));
+        ? addUser(authUser)
+        : addUser(null);
     });
     
     this.updateLocationStatus();
@@ -56,10 +55,9 @@ export class App extends Component {
   }
 
   render() {
-    const { authUser } = this.state;
     return (
       <div className="App">
-        <Header authUser={authUser} />
+        <Header />
         <Route exact path='/' component={RestaurantsContainer} />
         <Route path='/menu' component={Menu} />
         <Route path='/signin' component={SignIn} />
@@ -76,13 +74,15 @@ export const mapStateToProps = state => ({
 
 export const mapDispatchToProps = dispatch => ({
   addRestaurants: restaurants => dispatch(addRestaurants(restaurants)),
-  locationOff: boolean => dispatch(locationOff(boolean))
+  locationOff: boolean => dispatch(locationOff(boolean)),
+  addUser: user => dispatch(addUser(user))
 });
 
 App.propTypes = {
   addRestaurants: PropTypes.func,
   restaurants: PropTypes.array,
-  locationOff: PropTypes.func
+  locationOff: PropTypes.func,
+  addUser: PropTypes.func
 }; 
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

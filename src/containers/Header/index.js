@@ -64,6 +64,10 @@ export class Header extends Component {
   }
 }
 
+export const mapStateToProps = state => ({
+  authUser: state.authUser
+});
+
 export const mapDispatchToProps = dispatch => ({
   addRestaurants: restaurants => dispatch(addRestaurants(restaurants)),
   locationOff: boolean => dispatch(locationOff(boolean))
@@ -75,4 +79,4 @@ Header.propTypes = {
   locationOff: PropTypes.func
 };
 
-export default connect(null, mapDispatchToProps)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
