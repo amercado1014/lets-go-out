@@ -7,7 +7,7 @@ import { addRestaurants, locationOff } from '../../actions/';
 import { connect } from 'react-redux';
 import * as routes from '../../constants/routes';
 import { Link } from 'react-router-dom';
-import SignOut from '../../components/SignOut';
+import SignOut from '../SignOut';
 import PropTypes from 'prop-types';
 
 export class Header extends Component {

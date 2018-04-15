@@ -4,7 +4,7 @@ import { Route, withRouter } from 'react-router-dom';
 import Header from '../Header';
 import RestaurantsContainer from '../RestaurantsContainer';
 import Menu from '../Menu';
-import SignIn from '../SignIn';
+import SignIn from '../../components/SignIn';
 import SignUp from '../SignUp';
 import Favorites from '../Favorites';
 import { fetchLocation } from '../../api/apiCalls/fetchLocation';

@@ -9,7 +9,7 @@ export class SignOut extends Component {
 
   handleClick = () => {
     const { resetFavorites } = this.props;
-    auth.signOut;
+    auth.signOut();
     resetFavorites();
   }
 
