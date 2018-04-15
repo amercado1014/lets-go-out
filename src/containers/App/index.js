@@ -6,6 +6,7 @@ import RestaurantsContainer from '../RestaurantsContainer';
 import Menu from '../Menu';
 import SignIn from '../SignIn';
 import SignUp from '../SignUp';
+import Favorites from '../Favorites';
 import { fetchLocation } from '../../api/apiCalls/fetchLocation';
 import { fetchRestaurantsByLocation 
 } from '../../api/apiCalls/fetchRestaurantsByLocation';
@@ -60,9 +61,10 @@ export class App extends Component {
       <div className="App">
         <Header authUser={authUser} />
         <Route exact path='/' component={RestaurantsContainer} />
-        <Route exact path='/menu' component={Menu} />
-        <Route exact path='/signin' component={SignIn} />
-        <Route exact path='/signup' component={SignUp} />
+        <Route path='/menu' component={Menu} />
+        <Route path='/signin' component={SignIn} />
+        <Route path='/signup' component={SignUp} />
+        <Route path='/favorites' component={Favorites} />
       </div>
     );
   }
