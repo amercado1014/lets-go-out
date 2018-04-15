@@ -22,3 +22,13 @@ export const addUser = user => ({
   type: 'ADD_USER',
   user
 });
+
+export const addFavorite = favorite => ({
+  type: 'ADD_FAVORITE',
+  favorite
+});
+
+export const removeFavorite = favorite => ({
+  type: 'REMOVE_FAVORITE',
+  favorite
+});
