@@ -5,11 +5,6 @@
   margin: 30px auto;
   display: flex;
   justify-content: space-around;
-  cursor: pointer;
-}
-
-.restaurant:hover {
-  color: #afd045;
 }
 
 .restaurant-image {
@@ -17,11 +12,17 @@
   height: 200px;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
 }
 
 .restaurant-info {
   display: inline-block;
   margin: auto;
+  cursor: pointer;
+}
+
+.restaurant-info:hover {
+  color: #afd045;
 }
 
 .minimum,
@@ -39,4 +40,24 @@
 
 .logo {
   width: 35%;
+}
+
+.favorite-icon {
+  height: 30px;
+  width: 35px;
+}
+
+.favorite-div {
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.favorite-background {
+  background-color: #afd045;
 }

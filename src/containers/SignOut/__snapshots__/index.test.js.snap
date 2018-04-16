@@ -18,6 +18,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": "Sign Out",
+      "className": "signout-button",
       "onClick": [Function],
       "type": "button",
     },
@@ -32,6 +33,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": "Sign Out",
+        "className": "signout-button",
         "onClick": [Function],
         "type": "button",
       },

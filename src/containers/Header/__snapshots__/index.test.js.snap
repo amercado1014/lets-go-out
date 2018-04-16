@@ -73,10 +73,19 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h1>
-          Let's Order Out
-</h1>,
-        <p>
+        <img
+          alt="logo"
+          className="logo"
+          src="logo.png"
+/>,
+        <p
+          className="location"
+>
+          <img
+                    alt="logo"
+                    className="location-logo"
+                    src="location.png"
+          />
           Lakewood
           , 
           CO
@@ -85,21 +94,18 @@ ShallowWrapper {
           onSubmit={[Function]}
 >
           <input
+                    className="header-input"
                     onChange={[Function]}
                     placeholder="Enter city or zip code"
                     type="text"
                     value=""
           />
-          <button
-                    type="submit"
-          >
-                    Search
-          </button>
 </form>,
         <div
           className="navigation"
 >
           <Link
+                    className="signin-link"
                     replace={false}
                     to="/signin"
           >
@@ -107,6 +113,7 @@ ShallowWrapper {
           </Link>
 </div>,
       ],
+      "className": "header",
     },
     "ref": null,
     "rendered": Array [
@@ -115,11 +122,13 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Let's Order Out",
+          "alt": "logo",
+          "className": "logo",
+          "src": "logo.png",
         },
         "ref": null,
-        "rendered": "Let's Order Out",
-        "type": "h1",
+        "rendered": null,
+        "type": "img",
       },
       Object {
         "instance": null,
@@ -127,13 +136,32 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
+            <img
+              alt="logo"
+              className="location-logo"
+              src="location.png"
+/>,
             "Lakewood",
             ", ",
             "CO",
           ],
+          "className": "location",
         },
         "ref": null,
         "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "logo",
+              "className": "location-logo",
+              "src": "location.png",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
           "Lakewood",
           ", ",
           "CO",
@@ -145,50 +173,31 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            <input
-              onChange={[Function]}
-              placeholder="Enter city or zip code"
-              type="text"
-              value=""
+          "children": <input
+            className="header-input"
+            onChange={[Function]}
+            placeholder="Enter city or zip code"
+            type="text"
+            value=""
 />,
-            <button
-              type="submit"
->
-              Search
-</button>,
-          ],
           "onSubmit": [Function],
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "onChange": [Function],
-              "placeholder": "Enter city or zip code",
-              "type": "text",
-              "value": "",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "header-input",
+            "onChange": [Function],
+            "placeholder": "Enter city or zip code",
+            "type": "text",
+            "value": "",
           },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Search",
-              "type": "submit",
-            },
-            "ref": null,
-            "rendered": "Search",
-            "type": "button",
-          },
-        ],
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
         "type": "form",
       },
       Object {
@@ -197,6 +206,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <Link
+            className="signin-link"
             replace={false}
             to="/signin"
 >
@@ -211,6 +221,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": "Sign In",
+            "className": "signin-link",
             "replace": false,
             "to": "/signin",
           },
@@ -230,10 +241,19 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h1>
-            Let's Order Out
-</h1>,
-          <p>
+          <img
+            alt="logo"
+            className="logo"
+            src="logo.png"
+/>,
+          <p
+            className="location"
+>
+            <img
+                        alt="logo"
+                        className="location-logo"
+                        src="location.png"
+            />
             Lakewood
             , 
             CO
@@ -242,21 +262,18 @@ ShallowWrapper {
             onSubmit={[Function]}
 >
             <input
+                        className="header-input"
                         onChange={[Function]}
                         placeholder="Enter city or zip code"
                         type="text"
                         value=""
             />
-            <button
-                        type="submit"
-            >
-                        Search
-            </button>
 </form>,
           <div
             className="navigation"
 >
             <Link
+                        className="signin-link"
                         replace={false}
                         to="/signin"
             >
@@ -264,6 +281,7 @@ ShallowWrapper {
             </Link>
 </div>,
         ],
+        "className": "header",
       },
       "ref": null,
       "rendered": Array [
@@ -272,11 +290,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Let's Order Out",
+            "alt": "logo",
+            "className": "logo",
+            "src": "logo.png",
           },
           "ref": null,
-          "rendered": "Let's Order Out",
-          "type": "h1",
+          "rendered": null,
+          "type": "img",
         },
         Object {
           "instance": null,
@@ -284,13 +304,32 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
+              <img
+                alt="logo"
+                className="location-logo"
+                src="location.png"
+/>,
               "Lakewood",
               ", ",
               "CO",
             ],
+            "className": "location",
           },
           "ref": null,
           "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "logo",
+                "className": "location-logo",
+                "src": "location.png",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
             "Lakewood",
             ", ",
             "CO",
@@ -302,50 +341,31 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              <input
-                onChange={[Function]}
-                placeholder="Enter city or zip code"
-                type="text"
-                value=""
+            "children": <input
+              className="header-input"
+              onChange={[Function]}
+              placeholder="Enter city or zip code"
+              type="text"
+              value=""
 />,
-              <button
-                type="submit"
->
-                Search
-</button>,
-            ],
             "onSubmit": [Function],
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "onChange": [Function],
-                "placeholder": "Enter city or zip code",
-                "type": "text",
-                "value": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "header-input",
+              "onChange": [Function],
+              "placeholder": "Enter city or zip code",
+              "type": "text",
+              "value": "",
             },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Search",
-                "type": "submit",
-              },
-              "ref": null,
-              "rendered": "Search",
-              "type": "button",
-            },
-          ],
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
           "type": "form",
         },
         Object {
@@ -354,6 +374,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <Link
+              className="signin-link"
               replace={false}
               to="/signin"
 >
@@ -368,6 +389,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "Sign In",
+              "className": "signin-link",
               "replace": false,
               "to": "/signin",
             },
