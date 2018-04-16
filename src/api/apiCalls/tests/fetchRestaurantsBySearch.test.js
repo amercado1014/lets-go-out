@@ -24,10 +24,10 @@ describe('fetchRestaurantsBySearch', () => {
   });
 
   it('should throw an error if fetch has an error', () => {
-    const expected = Error('Error fetching restaurants: ');
+    const expected = Error('Error fetching restaurants: Error');
     window.fetch = jest.fn().mockImplementation(() =>
       Promise.reject({
-        ok: false
+        details: 'Error'
       })
     );
     expect(fetchRestaurantsBySearch()).rejects.toEqual(expected);
