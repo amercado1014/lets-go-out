@@ -45,10 +45,11 @@
 .favorite-icon {
   height: 30px;
   width: 35px;
+  background-color: white;
 }
 
 .favorite-div {
-  background-color: white;
+  background-color: #20161C;
   height: 50px;
   width: 50px;
   border-radius: 50%;

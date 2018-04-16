@@ -77,11 +77,11 @@ export class Restaurants extends Component {
           {authUser && 
           <div 
             onClick={this.handleFavorite}
-            className={`favorite-div ${favorite}`}>
+            className="favorite-div">
             <img
               src={favIcon}
               alt="favorite icon"
-              className="favorite-icon" />
+              className={`favorite-icon ${favorite}`} />
           </div>
           }
         </div>
