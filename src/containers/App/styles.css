@@ -1,6 +1,9 @@
 .App {
   text-align: center;
-  background-image: url("../../images/background.jpg");
+  background: linear-gradient(
+  rgba(33, 23, 29, 0.89), 
+  rgb(33, 23, 29, 0.89)),
+    url("../../images/background.jpg");
   height: 100%; 
 }
 
