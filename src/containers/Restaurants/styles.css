@@ -1,0 +1,64 @@
+.restaurant {
+  background-color:#20161C;
+  height: 30%;
+  width: 70%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.restaurant-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.restaurant-info {
+  display: inline-block;
+  margin: auto;
+  cursor: pointer;
+}
+
+.restaurant-info:hover {
+  color: #afd045;
+}
+
+.minimum,
+.delivery {
+  display: inline-block;
+}
+
+.minimum {
+  margin-right: 20px;
+}
+
+.delivery {
+  margin-left: 20px;
+}
+
+.logo {
+  width: 35%;
+}
+
+.favorite-icon {
+  height: 30px;
+  width: 35px;
+  background-color: white;
+}
+
+.favorite-div {
+  background-color: #20161C;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.favorite-background {
+  background-color: #afd045;
+}

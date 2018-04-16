@@ -58,37 +58,41 @@ export class SignUp extends Component {
     passwordOne === "" || email === "" || username === "";
 
      return (
-       <form onSubmit={this.handleSubmit}>
-         <input
-           type="text"
-           value={username}
-           name="username"
-           placeholder="Username"
-           onChange={this.handleChange} />
-         <input
-           type="text"
-           value={email}
-           name="email"
-           placeholder="Email Address"
-           onChange={this.handleChange} />
-         <input
-           type="password"
-           value={passwordOne}
-           name="passwordOne"
-           placeholder="Password"
-           onChange={this.handleChange} />
-         <input
-           type="password"
-           value={passwordTwo}
-           name="passwordTwo"
-           placeholder="Confirm Password"
-           onChange={this.handleChange} />
-         <button 
-           type="submit"
-           disabled={isInvalid}>
+       <form 
+         onSubmit={this.handleSubmit}
+         className="signup-form">
+         <div className="signup-div">
+           <input
+             type="text"
+             value={username}
+             name="username"
+             placeholder="Username"
+             onChange={this.handleChange} />
+           <input
+             type="text"
+             value={email}
+             name="email"
+             placeholder="Email Address"
+             onChange={this.handleChange} />
+           <input
+             type="password"
+             value={passwordOne}
+             name="passwordOne"
+             placeholder="Password"
+             onChange={this.handleChange} />
+           <input
+             type="password"
+             value={passwordTwo}
+             name="passwordTwo"
+             placeholder="Confirm Password"
+             onChange={this.handleChange} />
+           <button 
+             type="submit"
+             disabled={isInvalid}>
           Sign Up
-         </button>
-         { error && <p>{error.message}</p> }
+           </button>
+           { error && <p>{error.message}</p> }
+         </div>
        </form>
      );
    }
@@ -96,7 +100,8 @@ export class SignUp extends Component {
 
 export const SignUpLink = () => (
   <p>
-    {`Don't have an account?`} <Link to={routes.SIGN_UP}>Sign Up</Link>
+    {`Don't have an account?`} <Link className="signup-link" 
+      to={routes.SIGN_UP}>Sign Up</Link>
   </p>
 );
 

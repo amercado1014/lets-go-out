@@ -14,12 +14,15 @@ describe('App', () => {
   let wrapper;
   let mockAddRestaurants;
   let mockLocationOff;
+  let mockAddUser;
 
   beforeEach(() => {
     mockAddRestaurants = jest.fn();
     mockLocationOff = jest.fn();
+    mockAddUser = jest.fn();
     wrapper = shallow(<App addRestaurants={mockAddRestaurants} 
-      locationOff={mockLocationOff} />);
+      locationOff={mockLocationOff} 
+      addUser={mockAddUser} />);
   });
 
   it('should math the snapshot', () => {

@@ -11,6 +11,6 @@ export const fetchLocation = async () => {
     const location = await response.json();
     return location.location;
   } catch (error) {
-    throw new Error("Error fetching location: ", error);
+    throw new Error(`Error fetching location: ${error.message}`);
   }
 };

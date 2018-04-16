@@ -5,6 +5,7 @@ import { addMenu, addRestaurant,
   addFavorite, removeFavorite } from '../../actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import favIcon from '../../images/favorite.svg';
 import PropTypes from "prop-types";
 
 export class Restaurants extends Component {
@@ -45,24 +46,45 @@ export class Restaurants extends Component {
   render() {
     const { name, logoUrl, deliveryMin, 
       offersDelivery, deliveryPrice } = this.props.restaurant;
-    const { authUser } = this.props;
+    const { authUser, isFavorite } = this.props;
+    const favorite = isFavorite ? 'favorite-background' : '';
 
     return (
-      <div>
-        <div onClick={this.handleClick}>
-          <h2>{name}</h2>
-          <img src={logoUrl} alt="restaurant logo"/>
-          <p>Minimum: {deliveryMin || 'None'}</p>
-          {offersDelivery 
-            ? <p>Delivery: {deliveryPrice || 'Free'}</p>
-            : <p>Delivery: Takeout Only</p>
+      <div >
+        <div className="restaurant">
+          <img src={logoUrl} 
+            alt="restaurant logo"
+            className="restaurant-image"
+            onClick={this.handleClick}/>
+          <div className="restaurant-info"
+            onClick={this.handleClick}>
+            <h2>{name}</h2>
+            <div className="minimum">
+              <p>Minimum</p>
+              <p>{deliveryMin || 'None'}</p>
+            </div>
+            {offersDelivery 
+              ? <div className="delivery">
+                <p>Delivery</p> 
+                <p>{deliveryPrice || 'Free'}</p>
+              </div>
+              : <div className="delivery">
+                <p>Delivery</p> 
+                <p>Takeout Only</p>
+              </div>
+            }
+          </div>
+          {authUser && 
+          <div 
+            onClick={this.handleFavorite}
+            className="favorite-div">
+            <img
+              src={favIcon}
+              alt="favorite icon"
+              className={`favorite-icon ${favorite}`} />
+          </div>
           }
         </div>
-        {authUser && 
-          <button onClick={this.handleFavorite}>
-            Favorite
-          </button>
-        }
       </div>
     );
   }

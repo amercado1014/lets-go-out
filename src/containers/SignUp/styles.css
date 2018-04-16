@@ -1,0 +1,47 @@
+.signup-link {
+  color: #afd045;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  color: white;
+}
+
+.signup-form {
+  color: white;
+  background-color: #20161C;
+  height: 80vh;
+  width: 50vw;
+  margin: 2% auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-div input,
+.signup-div button {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.signup-div button {
+  background-color: #afd045;
+  cursor: pointer;
+}
+
+.signup-div button:hover {
+  color: white;
+}
+
+.signup-div button:disabled {
+  background-color: lightgray;
+  color: black;
+}

@@ -16,7 +16,11 @@ export const Favorites = ({favorites}) => {
       <div className="favorites">
         {displayFavorites.length > 0 
           ? displayFavorites 
-          : <h4>There are no favorites to display.</h4>}
+          : <div className="favorites-message">
+            <h4>
+              There are no favorites to display.
+            </h4>
+          </div>}
       </div>
     </div>
   );

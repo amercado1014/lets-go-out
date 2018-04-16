@@ -1,0 +1,16 @@
+.favorites {
+  height: 100vh;
+  color: white;
+}
+
+.favorites-message {
+  color: white;
+  background-color: #20161C;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10% auto;
+  width: 50vw;
+  height: 40%;
+}

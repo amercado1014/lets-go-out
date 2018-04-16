@@ -15,7 +15,10 @@ export class SignOut extends Component {
 
   render () {
     return (
-      <button type='button' onClick={this.handleClick}>
+      <button 
+        type='button' 
+        onClick={this.handleClick}
+        className="signout-button">
         Sign Out
       </button>
     );

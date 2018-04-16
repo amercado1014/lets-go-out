@@ -7,7 +7,10 @@ describe("RestaurantsContainer", () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<RestaurantsContainer restaurants={mockRestaurants}/>);
+    wrapper = shallow(<RestaurantsContainer 
+      restaurants={mockRestaurants}
+      favorites={mockRestaurants}
+      locationStatus={false} />);
   });
 
   it("should math the snapshot", () => {

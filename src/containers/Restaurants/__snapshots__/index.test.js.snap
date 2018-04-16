@@ -45,111 +45,89 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
-        <h2>
-          Big Daddy's Pizza - Lakewood
-</h2>,
+      "children": <div
+        className="restaurant"
+>
         <img
-          alt="restaurant logo"
-          src="https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png"
-/>,
-        <p>
-          Minimum: 
-          12
-</p>,
-        <p>
-          Delivery: 
-          3.5
-</p>,
-      ],
-      "onClick": [Function],
+                alt="restaurant logo"
+                className="restaurant-image"
+                onClick={[Function]}
+                src="https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png"
+        />
+        <div
+                className="restaurant-info"
+                onClick={[Function]}
+        >
+                <h2>
+                        Big Daddy's Pizza - Lakewood
+                </h2>
+                <div
+                        className="minimum"
+                >
+                        <p>
+                                Minimum
+                        </p>
+                        <p>
+                                12
+                        </p>
+                </div>
+                <div
+                        className="delivery"
+                >
+                        <p>
+                                Delivery
+                        </p>
+                        <p>
+                                3.5
+                        </p>
+                </div>
+        </div>
+</div>,
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Big Daddy's Pizza - Lakewood",
-        },
-        "ref": null,
-        "rendered": "Big Daddy's Pizza - Lakewood",
-        "type": "h2",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "alt": "restaurant logo",
-          "src": "https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "img",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "Minimum: ",
-            12,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          "Minimum: ",
-          12,
-        ],
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "Delivery: ",
-            3.5,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          "Delivery: ",
-          3.5,
-        ],
-        "type": "p",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h2>
-            Big Daddy's Pizza - Lakewood
-</h2>,
           <img
             alt="restaurant logo"
+            className="restaurant-image"
+            onClick={[Function]}
             src="https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png"
 />,
-          <p>
-            Minimum: 
-            12
-</p>,
-          <p>
-            Delivery: 
-            3.5
-</p>,
+          <div
+            className="restaurant-info"
+            onClick={[Function]}
+>
+            <h2>
+                        Big Daddy's Pizza - Lakewood
+            </h2>
+            <div
+                        className="minimum"
+            >
+                        <p>
+                                    Minimum
+                        </p>
+                        <p>
+                                    12
+                        </p>
+            </div>
+            <div
+                        className="delivery"
+            >
+                        <p>
+                                    Delivery
+                        </p>
+                        <p>
+                                    3.5
+                        </p>
+            </div>
+</div>,
+          undefined,
         ],
-        "onClick": [Function],
+        "className": "restaurant",
       },
       "ref": null,
       "rendered": Array [
@@ -158,18 +136,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Big Daddy's Pizza - Lakewood",
-          },
-          "ref": null,
-          "rendered": "Big Daddy's Pizza - Lakewood",
-          "type": "h2",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
             "alt": "restaurant logo",
+            "className": "restaurant-image",
+            "onClick": [Function],
             "src": "https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png",
           },
           "ref": null,
@@ -182,35 +151,382 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "Minimum: ",
-              12,
+              <h2>
+                Big Daddy's Pizza - Lakewood
+</h2>,
+              <div
+                className="minimum"
+>
+                <p>
+                                Minimum
+                </p>
+                <p>
+                                12
+                </p>
+</div>,
+              <div
+                className="delivery"
+>
+                <p>
+                                Delivery
+                </p>
+                <p>
+                                3.5
+                </p>
+</div>,
             ],
+            "className": "restaurant-info",
+            "onClick": [Function],
           },
           "ref": null,
           "rendered": Array [
-            "Minimum: ",
-            12,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Big Daddy's Pizza - Lakewood",
+              },
+              "ref": null,
+              "rendered": "Big Daddy's Pizza - Lakewood",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    Minimum
+</p>,
+                  <p>
+                    12
+</p>,
+                ],
+                "className": "minimum",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Minimum",
+                  },
+                  "ref": null,
+                  "rendered": "Minimum",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 12,
+                  },
+                  "ref": null,
+                  "rendered": 12,
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    Delivery
+</p>,
+                  <p>
+                    3.5
+</p>,
+                ],
+                "className": "delivery",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Delivery",
+                  },
+                  "ref": null,
+                  "rendered": "Delivery",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 3.5,
+                  },
+                  "ref": null,
+                  "rendered": 3.5,
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
           ],
-          "type": "p",
+          "type": "div",
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Delivery: ",
-              3.5,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            "Delivery: ",
-            3.5,
-          ],
-          "type": "p",
-        },
+        undefined,
       ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="restaurant"
+>
+          <img
+                    alt="restaurant logo"
+                    className="restaurant-image"
+                    onClick={[Function]}
+                    src="https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png"
+          />
+          <div
+                    className="restaurant-info"
+                    onClick={[Function]}
+          >
+                    <h2>
+                              Big Daddy's Pizza - Lakewood
+                    </h2>
+                    <div
+                              className="minimum"
+                    >
+                              <p>
+                                        Minimum
+                              </p>
+                              <p>
+                                        12
+                              </p>
+                    </div>
+                    <div
+                              className="delivery"
+                    >
+                              <p>
+                                        Delivery
+                              </p>
+                              <p>
+                                        3.5
+                              </p>
+                    </div>
+          </div>
+</div>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="restaurant logo"
+              className="restaurant-image"
+              onClick={[Function]}
+              src="https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png"
+/>,
+            <div
+              className="restaurant-info"
+              onClick={[Function]}
+>
+              <h2>
+                            Big Daddy's Pizza - Lakewood
+              </h2>
+              <div
+                            className="minimum"
+              >
+                            <p>
+                                          Minimum
+                            </p>
+                            <p>
+                                          12
+                            </p>
+              </div>
+              <div
+                            className="delivery"
+              >
+                            <p>
+                                          Delivery
+                            </p>
+                            <p>
+                                          3.5
+                            </p>
+              </div>
+</div>,
+            undefined,
+          ],
+          "className": "restaurant",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "restaurant logo",
+              "className": "restaurant-image",
+              "onClick": [Function],
+              "src": "https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h2>
+                  Big Daddy's Pizza - Lakewood
+</h2>,
+                <div
+                  className="minimum"
+>
+                  <p>
+                                    Minimum
+                  </p>
+                  <p>
+                                    12
+                  </p>
+</div>,
+                <div
+                  className="delivery"
+>
+                  <p>
+                                    Delivery
+                  </p>
+                  <p>
+                                    3.5
+                  </p>
+</div>,
+              ],
+              "className": "restaurant-info",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Big Daddy's Pizza - Lakewood",
+                },
+                "ref": null,
+                "rendered": "Big Daddy's Pizza - Lakewood",
+                "type": "h2",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <p>
+                      Minimum
+</p>,
+                    <p>
+                      12
+</p>,
+                  ],
+                  "className": "minimum",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Minimum",
+                    },
+                    "ref": null,
+                    "rendered": "Minimum",
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": 12,
+                    },
+                    "ref": null,
+                    "rendered": 12,
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <p>
+                      Delivery
+</p>,
+                    <p>
+                      3.5
+</p>,
+                  ],
+                  "className": "delivery",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Delivery",
+                    },
+                    "ref": null,
+                    "rendered": "Delivery",
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": 3.5,
+                    },
+                    "ref": null,
+                    "rendered": 3.5,
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          undefined,
+        ],
+        "type": "div",
+      },
       "type": "div",
     },
   ],

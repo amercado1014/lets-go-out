@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <App
     addRestaurants={[Function]}
+    addUser={[Function]}
     locationOff={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -21,28 +22,27 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Connect(Header)
-          authUser={null}
-/>,
-        <Route
-          exact={true}
-          path="/"
-          render={[Function]}
-/>,
+        <Connect(Header) />,
         <Route
           component={[Function]}
           exact={true}
+          path="/"
+/>,
+        <Route
+          component={[Function]}
           path="/menu"
 />,
         <Route
           component={[Function]}
-          exact={true}
           path="/signin"
 />,
         <Route
           component={[Function]}
-          exact={true}
           path="/signup"
+/>,
+        <Route
+          component={[Function]}
+          path="/favorites"
 />,
       ],
       "className": "App",
@@ -53,22 +53,7 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {
-          "authUser": null,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "exact": true,
-          "path": "/",
-          "render": [Function],
-        },
+        "props": Object {},
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -80,6 +65,18 @@ ShallowWrapper {
         "props": Object {
           "component": [Function],
           "exact": true,
+          "path": "/",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
           "path": "/menu",
         },
         "ref": null,
@@ -92,7 +89,6 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "component": [Function],
-          "exact": true,
           "path": "/signin",
         },
         "ref": null,
@@ -105,8 +101,19 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "component": [Function],
-          "exact": true,
           "path": "/signup",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "path": "/favorites",
         },
         "ref": null,
         "rendered": null,
@@ -122,28 +129,27 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Connect(Header)
-            authUser={null}
-/>,
-          <Route
-            exact={true}
-            path="/"
-            render={[Function]}
-/>,
+          <Connect(Header) />,
           <Route
             component={[Function]}
             exact={true}
+            path="/"
+/>,
+          <Route
+            component={[Function]}
             path="/menu"
 />,
           <Route
             component={[Function]}
-            exact={true}
             path="/signin"
 />,
           <Route
             component={[Function]}
-            exact={true}
             path="/signup"
+/>,
+          <Route
+            component={[Function]}
+            path="/favorites"
 />,
         ],
         "className": "App",
@@ -154,22 +160,7 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {
-            "authUser": null,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "exact": true,
-            "path": "/",
-            "render": [Function],
-          },
+          "props": Object {},
           "ref": null,
           "rendered": null,
           "type": [Function],
@@ -181,6 +172,18 @@ ShallowWrapper {
           "props": Object {
             "component": [Function],
             "exact": true,
+            "path": "/",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
             "path": "/menu",
           },
           "ref": null,
@@ -193,7 +196,6 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "component": [Function],
-            "exact": true,
             "path": "/signin",
           },
           "ref": null,
@@ -206,8 +208,19 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "component": [Function],
-            "exact": true,
             "path": "/signup",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "path": "/favorites",
           },
           "ref": null,
           "rendered": null,

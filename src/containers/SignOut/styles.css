@@ -1,0 +1,12 @@
+.signout-button {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  background: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.signout-button:hover {
+  color: white;
+}

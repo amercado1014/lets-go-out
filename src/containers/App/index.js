@@ -34,7 +34,7 @@ export class App extends Component {
       addRestaurants(cleanRestaurants);
     } catch (error) {
       this.setState({error});
-    }
+    }  
     
     firebase.auth.onAuthStateChanged(authUser => {
       authUser 
