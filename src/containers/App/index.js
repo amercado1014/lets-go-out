@@ -27,14 +27,14 @@ export class App extends Component {
 
   async componentDidMount() {
     const { addRestaurants, addUser } = this.props;
-    try {
+  try {
       const location = await fetchLocation();
       const restaurants = await fetchRestaurantsByLocation(location);
       const cleanRestaurants = restaurantsCleaner(restaurants);
       addRestaurants(cleanRestaurants);
     } catch (error) {
       this.setState({error});
-    }
+    }  
     
     firebase.auth.onAuthStateChanged(authUser => {
       authUser 
