@@ -48,15 +48,29 @@ export class Restaurants extends Component {
     const { authUser } = this.props;
 
     return (
-      <div>
-        <div onClick={this.handleClick}>
-          <h2>{name}</h2>
-          <img src={logoUrl} alt="restaurant logo"/>
-          <p>Minimum: {deliveryMin || 'None'}</p>
-          {offersDelivery 
-            ? <p>Delivery: {deliveryPrice || 'Free'}</p>
-            : <p>Delivery: Takeout Only</p>
-          }
+      <div >
+        <div className="restaurant"
+          onClick={this.handleClick}>
+          <img src={logoUrl} 
+            alt="restaurant logo"
+            className="restaurant-image"/>
+          <div className="restaurant-info">
+            <h2>{name}</h2>
+            <div className="minimum">
+              <p>Minimum</p>
+              <p>{deliveryMin || 'None'}</p>
+            </div>
+            {offersDelivery 
+              ? <div className="delivery">
+                <p>Delivery</p> 
+                <p>{deliveryPrice || 'Free'}</p>
+              </div>
+              : <div className="delivery">
+                <p>Delivery</p> 
+                <p>Takeout Only</p>
+              </div>
+            }
+          </div>
         </div>
         {authUser && 
           <button onClick={this.handleFavorite}>

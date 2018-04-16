@@ -9,6 +9,8 @@ import * as routes from '../../constants/routes';
 import { Link } from 'react-router-dom';
 import SignOut from '../SignOut';
 import PropTypes from 'prop-types';
+import logo from '../../images/logo.png';
+import locationLogo from '../../images/location.png';
 
 export class Header extends Component {
   constructor(props) {
@@ -35,23 +37,27 @@ export class Header extends Component {
       throw error.message;
     }
     this.props.locationOff(false);
+    this.setState({ searchValue: ''});
   }
 
   render() {
     const { authUser, restaurants } = this.props;
     return (
-      <div>
-        <h1>{ "Let's Order Out" }</h1>
+      <div className="header">
+        <img className="logo" src={logo} alt="logo"/>
         {restaurants.length > 0 &&
-        <p>{restaurants[0].city}, {restaurants[0].state}</p>
+          <p className="location">
+            <img className="location-logo" src={locationLogo} alt="logo"/> 
+            {restaurants[0].city}, {restaurants[0].state}
+          </p>
         }
         <form onSubmit={this.handleSubmit}>
           <input 
+            className="header-input"
             type="text"
             value={this.state.searchValue}
             placeholder="Enter city or zip code"
             onChange={this.handleChange}/>
-          <button type="submit">Search</button>
         </form>
         <div className="navigation">
           {authUser 
@@ -59,7 +65,9 @@ export class Header extends Component {
               <SignOut />
               <Link to='/favorites'>Favorites</Link>
             </div>
-            : <Link to={routes.SIGN_IN}>Sign In</Link>
+            : <Link className="signin-link"
+              to={routes.SIGN_IN}>Sign In
+            </Link>
           }
         </div>
       </div>

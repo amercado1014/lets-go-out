@@ -22,7 +22,7 @@ export const RestaurantsContainer = ({restaurants, locationStatus,
   });
  
   return (
-    <div>
+    <div className="restaurant-container">
       {locationStatus &&
       <h3>Seems like your browsers GeoLocation is disabled. 
         Please enter a city or zip code to search for restaurants.</h3>

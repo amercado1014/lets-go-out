@@ -1,0 +1,42 @@
+.restaurant {
+  background-color:#20161C;
+  height: 30%;
+  width: 70%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.restaurant:hover {
+  color: #afd045;
+}
+
+.restaurant-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 20%;
+  display: inline-block;
+}
+
+.restaurant-info {
+  display: inline-block;
+  margin: auto;
+}
+
+.minimum,
+.delivery {
+  display: inline-block;
+}
+
+.minimum {
+  margin-right: 20px;
+}
+
+.delivery {
+  margin-left: 20px;
+}
+
+.logo {
+  width: 35%;
+}
