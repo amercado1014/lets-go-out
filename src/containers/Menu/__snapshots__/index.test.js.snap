@@ -429,29 +429,35 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <div>
+        <div
+          className="menu-header"
+>
           <img
                     alt="restaurant logo"
                     src="https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png"
           />
-          <h1>
-                    Big Daddy's Pizza - Lakewood
-          </h1>
-          <h3>
-                    Pizza
-          </h3>
-          <p>
-                    850 Wadsworth Blvd
-                     
-                    Lakewood
-                    , 
-                    CO
-                     
-                    80214
-          </p>
-          <p>
-                    (303) 736-6090
-          </p>
+          <div
+                    className="menu-restaurant"
+          >
+                    <h1>
+                              Big Daddy's Pizza - Lakewood
+                    </h1>
+                    <h3>
+                              Pizza
+                    </h3>
+                    <p>
+                              850 Wadsworth Blvd
+                               
+                              Lakewood
+                              , 
+                              CO
+                               
+                              80214
+                    </p>
+                    <p>
+                              (303) 736-6090
+                    </p>
+          </div>
 </div>,
         Array [
           <div>
@@ -1090,6 +1096,7 @@ ShallowWrapper {
 </div>,
         ],
       ],
+      "className": "menu",
     },
     "ref": null,
     "rendered": Array [
@@ -1103,25 +1110,30 @@ ShallowWrapper {
               alt="restaurant logo"
               src="https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png"
 />,
-            <h1>
-              Big Daddy's Pizza - Lakewood
-</h1>,
-            <h3>
-              Pizza
-</h3>,
-            <p>
-              850 Wadsworth Blvd
-               
-              Lakewood
-              , 
-              CO
-               
-              80214
-</p>,
-            <p>
-              (303) 736-6090
-</p>,
+            <div
+              className="menu-restaurant"
+>
+              <h1>
+                            Big Daddy's Pizza - Lakewood
+              </h1>
+              <h3>
+                            Pizza
+              </h3>
+              <p>
+                            850 Wadsworth Blvd
+                             
+                            Lakewood
+                            , 
+                            CO
+                             
+                            80214
+              </p>
+              <p>
+                            (303) 736-6090
+              </p>
+</div>,
           ],
+          "className": "menu-header",
         },
         "ref": null,
         "rendered": Array [
@@ -1142,60 +1154,92 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Big Daddy's Pizza - Lakewood",
-            },
-            "ref": null,
-            "rendered": "Big Daddy's Pizza - Lakewood",
-            "type": "h1",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Pizza",
-            },
-            "ref": null,
-            "rendered": "Pizza",
-            "type": "h3",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
               "children": Array [
-                "850 Wadsworth Blvd",
-                " ",
-                "Lakewood",
-                ", ",
-                "CO",
-                " ",
-                "80214",
+                <h1>
+                  Big Daddy's Pizza - Lakewood
+</h1>,
+                <h3>
+                  Pizza
+</h3>,
+                <p>
+                  850 Wadsworth Blvd
+                   
+                  Lakewood
+                  , 
+                  CO
+                   
+                  80214
+</p>,
+                <p>
+                  (303) 736-6090
+</p>,
               ],
+              "className": "menu-restaurant",
             },
             "ref": null,
             "rendered": Array [
-              "850 Wadsworth Blvd",
-              " ",
-              "Lakewood",
-              ", ",
-              "CO",
-              " ",
-              "80214",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Big Daddy's Pizza - Lakewood",
+                },
+                "ref": null,
+                "rendered": "Big Daddy's Pizza - Lakewood",
+                "type": "h1",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Pizza",
+                },
+                "ref": null,
+                "rendered": "Pizza",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "850 Wadsworth Blvd",
+                    " ",
+                    "Lakewood",
+                    ", ",
+                    "CO",
+                    " ",
+                    "80214",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "850 Wadsworth Blvd",
+                  " ",
+                  "Lakewood",
+                  ", ",
+                  "CO",
+                  " ",
+                  "80214",
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "(303) 736-6090",
+                },
+                "ref": null,
+                "rendered": "(303) 736-6090",
+                "type": "p",
+              },
             ],
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "(303) 736-6090",
-            },
-            "ref": null,
-            "rendered": "(303) 736-6090",
-            "type": "p",
+            "type": "div",
           },
         ],
         "type": "div",
@@ -5046,29 +5090,35 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <div>
+          <div
+            className="menu-header"
+>
             <img
                         alt="restaurant logo"
                         src="https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png"
             />
-            <h1>
-                        Big Daddy's Pizza - Lakewood
-            </h1>
-            <h3>
-                        Pizza
-            </h3>
-            <p>
-                        850 Wadsworth Blvd
-                         
-                        Lakewood
-                        , 
-                        CO
-                         
-                        80214
-            </p>
-            <p>
-                        (303) 736-6090
-            </p>
+            <div
+                        className="menu-restaurant"
+            >
+                        <h1>
+                                    Big Daddy's Pizza - Lakewood
+                        </h1>
+                        <h3>
+                                    Pizza
+                        </h3>
+                        <p>
+                                    850 Wadsworth Blvd
+                                     
+                                    Lakewood
+                                    , 
+                                    CO
+                                     
+                                    80214
+                        </p>
+                        <p>
+                                    (303) 736-6090
+                        </p>
+            </div>
 </div>,
           Array [
             <div>
@@ -5707,6 +5757,7 @@ ShallowWrapper {
 </div>,
           ],
         ],
+        "className": "menu",
       },
       "ref": null,
       "rendered": Array [
@@ -5720,25 +5771,30 @@ ShallowWrapper {
                 alt="restaurant logo"
                 src="https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png"
 />,
-              <h1>
-                Big Daddy's Pizza - Lakewood
-</h1>,
-              <h3>
-                Pizza
-</h3>,
-              <p>
-                850 Wadsworth Blvd
-                 
-                Lakewood
-                , 
-                CO
-                 
-                80214
-</p>,
-              <p>
-                (303) 736-6090
-</p>,
+              <div
+                className="menu-restaurant"
+>
+                <h1>
+                                Big Daddy's Pizza - Lakewood
+                </h1>
+                <h3>
+                                Pizza
+                </h3>
+                <p>
+                                850 Wadsworth Blvd
+                                 
+                                Lakewood
+                                , 
+                                CO
+                                 
+                                80214
+                </p>
+                <p>
+                                (303) 736-6090
+                </p>
+</div>,
             ],
+            "className": "menu-header",
           },
           "ref": null,
           "rendered": Array [
@@ -5759,60 +5815,92 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Big Daddy's Pizza - Lakewood",
-              },
-              "ref": null,
-              "rendered": "Big Daddy's Pizza - Lakewood",
-              "type": "h1",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Pizza",
-              },
-              "ref": null,
-              "rendered": "Pizza",
-              "type": "h3",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
                 "children": Array [
-                  "850 Wadsworth Blvd",
-                  " ",
-                  "Lakewood",
-                  ", ",
-                  "CO",
-                  " ",
-                  "80214",
+                  <h1>
+                    Big Daddy's Pizza - Lakewood
+</h1>,
+                  <h3>
+                    Pizza
+</h3>,
+                  <p>
+                    850 Wadsworth Blvd
+                     
+                    Lakewood
+                    , 
+                    CO
+                     
+                    80214
+</p>,
+                  <p>
+                    (303) 736-6090
+</p>,
                 ],
+                "className": "menu-restaurant",
               },
               "ref": null,
               "rendered": Array [
-                "850 Wadsworth Blvd",
-                " ",
-                "Lakewood",
-                ", ",
-                "CO",
-                " ",
-                "80214",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Big Daddy's Pizza - Lakewood",
+                  },
+                  "ref": null,
+                  "rendered": "Big Daddy's Pizza - Lakewood",
+                  "type": "h1",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Pizza",
+                  },
+                  "ref": null,
+                  "rendered": "Pizza",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "850 Wadsworth Blvd",
+                      " ",
+                      "Lakewood",
+                      ", ",
+                      "CO",
+                      " ",
+                      "80214",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "850 Wadsworth Blvd",
+                    " ",
+                    "Lakewood",
+                    ", ",
+                    "CO",
+                    " ",
+                    "80214",
+                  ],
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "(303) 736-6090",
+                  },
+                  "ref": null,
+                  "rendered": "(303) 736-6090",
+                  "type": "p",
+                },
               ],
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "(303) 736-6090",
-              },
-              "ref": null,
-              "rendered": "(303) 736-6090",
-              "type": "p",
+              "type": "div",
             },
           ],
           "type": "div",

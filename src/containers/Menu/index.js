@@ -27,13 +27,15 @@ export const Menu = ({menu, restaurant}) => {
   });
 
   return (
-    <div>
-      <div>
+    <div className="menu">
+      <div className="menu-header">
         <img src={logoUrl} alt="restaurant logo"/>
-        <h1>{name}</h1>
-        <h3>{foodTypes}</h3>
-        <p>{streetAddress} {city}, {state} {zip}</p>
-        <p>{phone}</p>
+        <div className="menu-restaurant">
+          <h1>{name}</h1>
+          <h3>{foodTypes}</h3>
+          <p>{streetAddress} {city}, {state} {zip}</p>
+          <p>{phone}</p>
+        </div>
       </div>
       {displayMenuSection}
     </div>

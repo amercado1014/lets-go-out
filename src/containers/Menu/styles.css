@@ -1,0 +1,12 @@
+.menu {
+  color: white;
+
+}
+
+.menu-header {
+  display: flex;
+  flex-direction: row;
+  background-color: #20161C;
+  justify-content: space-around
+}
+
