@@ -11,6 +11,6 @@ export const fetchRestaurantsByLocation = async location => {
     const restaurants = await response.json();
     return restaurants.restaurants;
   } catch (error) {
-    throw new Error('Error fetching restaurants: ', error);
+    throw new Error(`Error fetching restaurants: ${error.details}`);
   }
 };
