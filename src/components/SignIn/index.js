@@ -46,26 +46,32 @@ export class SignIn extends Component {
     const isInvalid = password === "" || email === "";
 
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input
-          type="text"
-          value={email}
-          name="email"
-          placeholder="Email Address"
-          onChange={this.handleChange}
-        />
-        <input
-          type="password"
-          value={password}
-          name="password"
-          placeholder="Password"
-          onChange={this.handleChange}
-        />
-        <button type="submit" disabled={isInvalid}>
+      <form 
+        onSubmit={this.handleSubmit}
+        className="signin-form">
+        <div className="signin-div">
+          <input
+            type="text"
+            value={email}
+            name="email"
+            placeholder="Email Address"
+            onChange={this.handleChange}
+          />
+          <input
+            type="password"
+            value={password}
+            name="password"
+            placeholder="Password"
+            onChange={this.handleChange}
+          />
+          <button type="submit" 
+            disabled={isInvalid}
+            className="signin-button">
           Sign In
-        </button>
-        {error && <p>{error.message}</p>}
-        <SignUpLink />
+          </button>
+          {error && <p>{error.message}</p>}
+          <SignUpLink />
+        </div>
       </form>
     );
   }

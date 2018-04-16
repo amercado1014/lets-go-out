@@ -63,7 +63,7 @@ export class Header extends Component {
           {authUser 
             ? <div>
               <SignOut />
-              <Link to='/favorites'>Favorites</Link>
+              <Link className="signin-link" to='/favorites'>Favorites</Link>
             </div>
             : <Link className="signin-link"
               to={routes.SIGN_IN}>Sign In
