@@ -17,7 +17,8 @@ export class Header extends Component {
     super(props);
 
     this.state = {
-      searchValue: ''
+      searchValue: '',
+      error: ''
     };
   }
 
@@ -34,7 +35,7 @@ export class Header extends Component {
       const cleanRestaurants = restaurantsCleaner(restaurants);
       this.props.addRestaurants(cleanRestaurants);
     } catch (error) {
-      throw error.message;
+      this.setState({error: error.details});
     }
     this.props.locationOff(false);
     this.setState({ searchValue: ''});

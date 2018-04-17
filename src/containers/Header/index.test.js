@@ -25,8 +25,11 @@ describe('Header', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should have a default state of an empty string for searchValue', () => {
-    expect(wrapper.state('searchValue')).toEqual('');
+  it('should have a default state', () => {
+    expect(wrapper.state()).toEqual({
+      searchValue: '',
+      error: ''
+    });
   });
 
   it('should update the state when handleChange is called', () => {
