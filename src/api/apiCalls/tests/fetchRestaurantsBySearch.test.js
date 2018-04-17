@@ -23,13 +23,13 @@ describe('fetchRestaurantsBySearch', () => {
     await expect(fetchRestaurantsBySearch()).resolves.toEqual(expected);
   });
 
-  it('should throw an error if fetch has an error', () => {
+  it('should throw an error if fetch has an error', async () => {
     const expected = Error('Error fetching restaurants: Error');
     window.fetch = jest.fn().mockImplementation(() =>
       Promise.reject({
         details: 'Error'
       })
     );
-    expect(fetchRestaurantsBySearch()).rejects.toEqual(expected);
+    await expect(fetchRestaurantsBySearch()).rejects.toEqual(expected);
   });
 });

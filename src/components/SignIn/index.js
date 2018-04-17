@@ -1,17 +1,17 @@
-import React, { Component } from "react";
-import "./styles.css";
-import { SignUpLink } from "../../containers/SignUp";
-import { withRouter } from "react-router-dom";
-import { auth } from "../../firebase";
-import * as routes from "../../constants/routes";
+import React, { Component } from 'react';
+import './styles.css';
+import { SignUpLink } from '../../containers/SignUp';
+import { withRouter } from 'react-router-dom';
+import { auth } from '../../firebase';
+import * as routes from '../../constants/routes';
 
 export class SignIn extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      email: "",
-      password: "",
+      email: '',
+      password: '',
       error: null
     };
   }
@@ -21,29 +21,21 @@ export class SignIn extends Component {
     this.setState({ [name]: value });
   };
 
-  handleSubmit = event => {
+  handleSubmit = async event => {
     event.preventDefault();
     const { email, password } = this.state;
-
-    auth
-      .signIn(email, password)
-      .then(authUser => {
-        this.setState({
-          email: "",
-          password: "",
-          error: null
-        });
-      })
-      .then(authUser => this.props.history.push(routes.HOME))
-      .catch(error => {
-        this.setState({ error: error });
-      });
-  };
+    const { history } = this.props;
+    try {
+      await auth.signIn(email, password);
+      history.push(routes.HOME);
+    } catch (error) {
+      this.setState({ error: error.message });
+    }
+  }
 
   render() {
     const { email, password, error } = this.state;
-
-    const isInvalid = password === "" || email === "";
+    const isInvalid = password === '' || email === '';
 
     return (
       <form 
@@ -69,7 +61,7 @@ export class SignIn extends Component {
             className="signin-button">
           Sign In
           </button>
-          {error && <p>{error.message}</p>}
+          {error && <p>{error}</p>}
           <SignUpLink />
         </div>
       </form>
