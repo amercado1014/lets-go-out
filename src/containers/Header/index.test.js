@@ -1,22 +1,21 @@
 import React from 'react';
-import { Header } from '../Header';
+import { Header, mapStateToProps, mapDispatchToProps } from '../Header';
 import { shallow } from 'enzyme';
 import { fetchRestaurantsBySearch 
 } from '../../api/apiCalls/fetchRestaurantsBySearch';
 import { restaurantsCleaner } from '../../api/helpers/restaurantsCleaner';
 import { mockRestaurants } from '../../mockData/mockData';
+import * as actions from '../../actions';
 
 jest.mock('../../api/apiCalls/fetchRestaurantsBySearch');
 jest.mock('../../api/helpers/restaurantsCleaner');
 
 describe('Header', () => {
   let wrapper;
-  let mockAddRestaurants;
-  let mockLocationOff;
+  const mockLocationOff = jest.fn();
+  const mockAddRestaurants = jest.fn();
 
   beforeEach(() => {
-    mockAddRestaurants = jest.fn();
-    mockLocationOff = jest.fn();
     wrapper = shallow(<Header addRestaurants={mockAddRestaurants} 
       locationOff={mockLocationOff} 
       restaurants={mockRestaurants} />);
@@ -36,7 +35,7 @@ describe('Header', () => {
     expect(wrapper.state('searchValue')).toEqual('Hello World');
   });
 
-  it('should call fetchRestaurantsBySearch on handleSubmit', () => {
+  it('should call fetchRBS on handleSubmit with correct params', () => {
     wrapper.setState({ searchValue: 80227 });
     const expected = wrapper.state("searchValue");
     const mockEvent = { preventDefault: jest.fn() };
@@ -50,9 +49,53 @@ describe('Header', () => {
     expect(restaurantsCleaner).toHaveBeenCalled();
   });
 
-  it.skip('should call addRestaurants on handleSubmit', () => {
+  it('should call addRestaurants on handleSubmit', () => {
     const mockEvent = { preventDefault: jest.fn() };
     wrapper.instance().handleSubmit(mockEvent);
     expect(mockAddRestaurants).toHaveBeenCalled();
+  });
+
+  it('should call locationOff on handleSubmit with correct params', () => {
+    const mockEvent = { preventDefault: jest.fn() };
+    wrapper.instance().handleSubmit(mockEvent);
+    expect(mockLocationOff).toHaveBeenCalledWith(false);
+  });
+});
+
+describe("mapStateToProps", () => {
+  it("correctly maps authUser to props", () => {
+    const authUser = {name: 'Jimmy'};
+    const expected = authUser;
+    const mockState = { authUser };
+    const mapped = mapStateToProps(mockState);
+    expect(mapped.authUser).toEqual(expected);
+  });
+
+  it("correctly maps restaurants to props", () => {
+    const restaurants = mockRestaurants;
+    const expected = restaurants;
+    const mockState = { restaurants };
+    const mapped = mapStateToProps(mockState);
+    expect(mapped.restaurants).toEqual(expected);
+  });
+});
+
+describe('mapDispatchToProps', () => {
+  it('should call dispatch with correct params on addRestaurants', () => {
+    const mockDispatch = jest.fn();
+    const restaurants = mockRestaurants;
+    const expected = actions.addRestaurants(restaurants)
+    const mapped = mapDispatchToProps(mockDispatch);
+    mapped.addRestaurants(restaurants);
+    expect(mockDispatch).toHaveBeenCalledWith(expected);
+  });
+
+  it('should call dispatch with correct params on locationOff', () => {
+    const mockDispatch = jest.fn();
+    const boolean = false;
+    const expected = actions.locationOff(boolean);
+    const mapped = mapDispatchToProps(mockDispatch);
+    mapped.locationOff(boolean);
+    expect(mockDispatch).toHaveBeenCalledWith(expected);
   });
 });
