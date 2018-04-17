@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './styles.css';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { auth } from '../../firebase';
 import * as routes from '../../constants/routes';
 
@@ -86,13 +86,6 @@ export class SignUp extends Component {
     );
   }
 }
-
-export const SignUpLink = () => (
-  <p>
-    {`Don't have an account?`} <Link className="signup-link" 
-      to={routes.SIGN_UP}>Sign Up</Link>
-  </p>
-);
 
 export default withRouter(SignUp);
 
