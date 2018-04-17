@@ -1,12 +1,11 @@
 import React from 'react';
 import './styles.css';
 import { Link, withRouter } from 'react-router-dom';
-import * as routes from '../../constants/routes';
 
 export const SignUpLink = () => (
   <p>
     {`Don't have an account?`}{" "}
-    <Link className="signup-link" to={routes.SIGN_UP}>
+    <Link className="signup-link" to='/signup'>
       Sign Up
     </Link>
   </p>

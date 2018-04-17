@@ -3,7 +3,6 @@ import './styles.css';
 import { SignUpLink } from '../SignUpLink';
 import { withRouter } from 'react-router-dom';
 import { auth } from '../../firebase';
-import * as routes from '../../constants/routes';
 
 export class SignIn extends Component {
   constructor(props) {
@@ -27,7 +26,7 @@ export class SignIn extends Component {
     const { history } = this.props;
     try {
       await auth.signIn(email, password);
-      history.push(routes.HOME);
+      history.push('/');
     } catch (error) {
       this.setState({ error: error.message });
     }

@@ -5,7 +5,10 @@ import { fetchLocation } from '../../api/apiCalls/fetchLocation';
 import { fetchRestaurantsByLocation 
 } from '../../api/apiCalls/fetchRestaurantsByLocation';
 import { restaurantsCleaner } from '../../api/helpers/restaurantsCleaner';
-import { mockRestaurants } from '../../mockData/mockData';
+import { mockRestaurants, 
+  mockLocationApiData,
+  returnedMockRestaurantApiData, 
+  cleanRestaurantData } from '../../mockData/mockData';
 import * as actions from '../../actions';
 
 jest.mock('../../api/apiCalls/fetchLocation');
@@ -34,23 +37,21 @@ describe('App', () => {
   });
 
   it('should call fetchLocation on componentDidMount', () => {
-    wrapper.instance().componentDidMount();
     expect(fetchLocation).toHaveBeenCalled();
   });
 
-  it('should call fetchRestaurantsByLocation on componentDidMount', () => { 
-    wrapper.instance().componentDidMount();
-    expect(fetchRestaurantsByLocation).toHaveBeenCalled();
+  it('should call fetchRBL on componentDidMount w/ params', () => {
+    const expected = mockLocationApiData; 
+    expect(fetchRestaurantsByLocation).toHaveBeenCalledWith(expected);
   });
 
-  it('should call restaurantsCleaner on componentDidMount', () => {
-    wrapper.instance().componentDidMount();
-    expect(restaurantsCleaner).toHaveBeenCalled();
+  it('should call restaurantsCleaner on componentDidMount w/ params', () => {
+    const expected = returnedMockRestaurantApiData;
+    expect(restaurantsCleaner).toHaveBeenCalledWith(expected);
   });
 
-  it('should call addRestaurants on componentDidMount', () => {
-    wrapper.instance().componentDidMount();
-    expect(mockAddRestaurants).toHaveBeenCalled();
+  it('should call addRestaurants on componentDidMount w/ params', () => {
+    expect(mockAddRestaurants).toHaveBeenCalledWith(cleanRestaurantData);
   });
 });
 

@@ -2,7 +2,6 @@ import React from 'react';
 import { SignIn } from '../SignIn';
 import { shallow } from 'enzyme';
 import { auth } from '../../firebase';
-import * as routes from "../../constants/routes";
 
 describe('SignIn', () => {
   let wrapper;
@@ -45,7 +44,7 @@ describe('SignIn', () => {
   it('should call history.push with correct params on handleSubmit', () => {
     const mockEvent = { preventDefault: jest.fn() };
     wrapper.instance().handleSubmit(mockEvent);
-    expect(mockHistory.push).toHaveBeenCalledWith(routes.HOME);
+    expect(mockHistory.push).toHaveBeenCalledWith('/');
   });
 
   it('should set state with error if signIn returns an error', async () => {
