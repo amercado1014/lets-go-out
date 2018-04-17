@@ -16,10 +16,31 @@ describe("RestaurantsContainer", () => {
   it("should math the snapshot", () => {
     expect(wrapper).toMatchSnapshot();
   });
+});
 
-  it('should map restaurants to the store', () => {
-    const mockStore = { restaurants: mockRestaurants };
-    const mapped = mapStateToProps(mockStore);
-    expect(mapped).toEqual(mockStore);
+describe("mapStateToProps", () => {
+  it("correctly maps restaurants to props", () => {
+    const restaurants = mockRestaurants;
+    const expected = restaurants;
+    const mockState = { restaurants };
+    const mapped = mapStateToProps(mockState);
+    expect(mapped.restaurants).toEqual(expected);
+  });
+
+  it('correctly maps locationStatus to props', () => {
+    const locationStatus = false;
+    const expected = locationStatus;
+    const mockState = { locationStatus };
+    const mapped = mapStateToProps(mockState);
+    expect(mapped.locationStatus).toEqual(expected);
+  });
+
+  it('correctly maps favorites to props', () => {
+    const favorites = mockRestaurants;
+    const expected = favorites;
+    const mockState = { favorites };
+    const mapped = mapStateToProps(mockState);
+    expect(mapped.favorites).toEqual(expected);
   });
 });
+
