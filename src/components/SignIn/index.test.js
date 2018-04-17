@@ -16,7 +16,7 @@ describe('SignIn', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should have a default', () => {
+  it('should have a default state', () => {
     expect(wrapper.state()).toEqual({
       email: '',
       password: '',
