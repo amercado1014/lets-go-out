@@ -5,6 +5,15 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Restaurants
+    addFavorite={[Function]}
+    addMenu={[Function]}
+    addRestaurant={[Function]}
+    history={
+        Object {
+            "push": [Function],
+          }
+    }
+    removeFavorite={[Function]}
     restaurant={
         Object {
             "apiKey": "aa1163f8eb68a8f7144247b91fbcb2f39e65e39821ec08a9",

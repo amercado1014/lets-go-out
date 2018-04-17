@@ -9,6 +9,13 @@ import favIcon from '../../images/favorite.svg';
 import PropTypes from "prop-types";
 
 export class Restaurants extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      error: ''
+    };
+  }
 
   handleClick = async () => {
     const { restaurant, addMenu, addRestaurant, history } = this.props;
@@ -18,7 +25,7 @@ export class Restaurants extends Component {
       addRestaurant(restaurant);
       history.push('/menu');
     } catch (error) {
-      throw error;
+      this.setState({error: error.details});
     }
   }
 
