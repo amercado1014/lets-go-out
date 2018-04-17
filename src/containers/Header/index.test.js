@@ -4,7 +4,9 @@ import { shallow } from 'enzyme';
 import { fetchRestaurantsBySearch 
 } from '../../api/apiCalls/fetchRestaurantsBySearch';
 import { restaurantsCleaner } from '../../api/helpers/restaurantsCleaner';
-import { mockRestaurants } from '../../mockData/mockData';
+import { mockRestaurants, 
+  returnedMockRestaurantApiData, 
+  cleanRestaurantData } from '../../mockData/mockData';
 import * as actions from '../../actions';
 
 jest.mock('../../api/apiCalls/fetchRestaurantsBySearch');
@@ -46,16 +48,18 @@ describe('Header', () => {
     expect(fetchRestaurantsBySearch).toHaveBeenCalledWith(expected);
   });
 
-  it('should call restaurantsCleaner on handleSubmit', () => {
+  it('should call restaurantsCleaner on handleSubmit w/ correct params', () => {
     const mockEvent = { preventDefault: jest.fn() };
     wrapper.instance().handleSubmit(mockEvent);
-    expect(restaurantsCleaner).toHaveBeenCalled();
+    const expected = returnedMockRestaurantApiData;
+    expect(restaurantsCleaner).toHaveBeenCalledWith(expected);
   });
 
-  it('should call addRestaurants on handleSubmit', () => {
+  it('should call addRestaurants on handleSubmit w/ correct params', () => {
     const mockEvent = { preventDefault: jest.fn() };
     wrapper.instance().handleSubmit(mockEvent);
-    expect(mockAddRestaurants).toHaveBeenCalled();
+    const expected = cleanRestaurantData;
+    expect(mockAddRestaurants).toHaveBeenCalledWith(expected);
   });
 
   it('should call locationOff on handleSubmit with correct params', () => {
