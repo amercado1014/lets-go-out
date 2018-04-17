@@ -9,7 +9,8 @@ describe('menu reducer', () => {
   it('should return state with a menu', () => {
     const menu = [1, 2, 3];
     const expected = [1, 2, 3];
+    const state = [];
     const action = actions.addMenu(menu);
-    expect(reducer(undefined, action)).toEqual(expected);
+    expect(reducer(state, action)).toEqual(expected);
   });
 });

@@ -5,7 +5,7 @@ import Header from '../Header';
 import RestaurantsContainer from '../RestaurantsContainer';
 import Menu from '../Menu';
 import SignIn from '../../components/SignIn';
-import SignUp from '../SignUp';
+import SignUp from '../../components/SignUp';
 import Favorites from '../Favorites';
 import { fetchLocation } from '../../api/apiCalls/fetchLocation';
 import { fetchRestaurantsByLocation 

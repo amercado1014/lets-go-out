@@ -5,7 +5,6 @@ import { fetchRestaurantsBySearch
 import { restaurantsCleaner } from '../../api/helpers/restaurantsCleaner';
 import { addRestaurants, locationOff } from '../../actions/';
 import { connect } from 'react-redux';
-import * as routes from '../../constants/routes';
 import { Link } from 'react-router-dom';
 import SignOut from '../SignOut';
 import PropTypes from 'prop-types';
@@ -17,7 +16,8 @@ export class Header extends Component {
     super(props);
 
     this.state = {
-      searchValue: ''
+      searchValue: '',
+      error: ''
     };
   }
 
@@ -34,7 +34,7 @@ export class Header extends Component {
       const cleanRestaurants = restaurantsCleaner(restaurants);
       this.props.addRestaurants(cleanRestaurants);
     } catch (error) {
-      throw error.message;
+      this.setState({error: error.details});
     }
     this.props.locationOff(false);
     this.setState({ searchValue: ''});
@@ -65,9 +65,7 @@ export class Header extends Component {
               <SignOut />
               <Link className="signin-link" to='/favorites'>Favorites</Link>
             </div>
-            : <Link className="signin-link"
-              to={routes.SIGN_IN}>Sign In
-            </Link>
+            : <Link className="signin-link" to='/signin'>Sign In</Link>
           }
         </div>
       </div>

@@ -11,6 +11,6 @@ export const fetchMenu = async menuKey => {
     const menu = await response.json();
     return menu;
   } catch (error) {
-    throw new Error("Error fetching menu: ", error);
+    throw new Error(`Error fetching menu: ${error.details}`);
   }
 };

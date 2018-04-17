@@ -1,14 +1,14 @@
 import React from 'react';
-import { SignIn } from '../SignIn';
+import { SignUp } from '../SignUp';
 import { shallow } from 'enzyme';
 import { auth } from '../../firebase';
 
-describe('SignIn', () => {
+describe('SignUp', () => {
   let wrapper;
   const mockHistory = { push: jest.fn() };
 
   beforeEach(() => {
-    wrapper = shallow(<SignIn history={mockHistory}/>);
+    wrapper = shallow(<SignUp history={mockHistory} />);
   });
 
   it('should math the snapshot', () => {
@@ -17,8 +17,10 @@ describe('SignIn', () => {
 
   it('should have a default state', () => {
     expect(wrapper.state()).toEqual({
+      username: '',
       email: '',
-      password: '',
+      passwordOne: '',
+      passwordTwo: '',
       error: null
     });
   });
@@ -29,16 +31,16 @@ describe('SignIn', () => {
     expect(wrapper.state('password')).toEqual('password');
   });
 
-  it('should call signIn on handleSubmit with correct params', () => {
+  it('should call signUp on handleSubmit with correct params', () => {
     const mockEvent = { preventDefault: jest.fn() };
-    auth.signIn = jest.fn();
+    auth.signUp = jest.fn();
     wrapper.setState({
       email: 'jim@gmail.com',
-      password: 'password'
+      passwordOne: 'password'
     });
-    const { email, password } = wrapper.state();
+    const { email, passwordOne } = wrapper.state();
     wrapper.instance().handleSubmit(mockEvent);
-    expect(auth.signIn).toHaveBeenCalledWith(email, password);
+    expect(auth.signUp).toHaveBeenCalledWith(email, passwordOne);
   });
 
   it('should call history.push with correct params on handleSubmit', () => {
@@ -47,9 +49,9 @@ describe('SignIn', () => {
     expect(mockHistory.push).toHaveBeenCalledWith('/');
   });
 
-  it('should set state with error if signIn returns an error', async () => {
+  it('should set state with error if signUp returns an error', async () => {
     const mockEvent = { preventDefault: jest.fn() };
-    auth.signIn = jest.fn().mockImplementation(() =>
+    auth.signUp = jest.fn().mockImplementation(() =>
       Promise.reject({
         message: 'Error'
       })

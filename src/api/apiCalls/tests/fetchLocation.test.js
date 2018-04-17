@@ -36,7 +36,7 @@ describe("fetchLocation", () => {
     const expected = Error("Error fetching location: Error");
     window.fetch = jest.fn().mockImplementation(() =>
       Promise.reject({
-        message: 'Error'
+        details: 'Error'
       })
     );
     await expect(fetchLocation()).rejects.toEqual(expected);

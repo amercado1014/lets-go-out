@@ -1,15 +1,16 @@
 import React from 'react';
-import SignUp from '../SignUp';
+import { SignUpLink } from '../SignUpLink';
 import { shallow } from 'enzyme';
 
-describe('SignUp', () => {
+describe('SignUpLink', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<SignUp />);
+    wrapper = shallow(<SignUpLink />);
   });
 
   it('should math the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
+

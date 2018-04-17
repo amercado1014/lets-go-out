@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SignIn should math the snapshot 1`] = `
+exports[`SignUp should math the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SignIn
+  Symbol(enzyme.__unrendered__): <SignUp
     history={
         Object {
             "push": [Function],
@@ -24,8 +24,15 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <div
-        className="signin-div"
+        className="signup-div"
 >
+        <input
+                name="username"
+                onChange={[Function]}
+                placeholder="Username"
+                type="text"
+                value=""
+        />
         <input
                 name="email"
                 onChange={[Function]}
@@ -34,22 +41,27 @@ ShallowWrapper {
                 value=""
         />
         <input
-                name="password"
+                name="passwordOne"
                 onChange={[Function]}
                 placeholder="Password"
                 type="password"
                 value=""
         />
+        <input
+                name="passwordTwo"
+                onChange={[Function]}
+                placeholder="Confirm Password"
+                type="password"
+                value=""
+        />
         <button
-                className="signin-button"
                 disabled={true}
                 type="submit"
         >
-                Sign In
+                Sign Up
         </button>
-        <Unknown />
 </div>,
-      "className": "signin-form",
+      "className": "signup-form",
       "onSubmit": [Function],
     },
     "ref": null,
@@ -60,6 +72,13 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <input
+            name="username"
+            onChange={[Function]}
+            placeholder="Username"
+            type="text"
+            value=""
+/>,
+          <input
             name="email"
             onChange={[Function]}
             placeholder="Email Address"
@@ -67,26 +86,46 @@ ShallowWrapper {
             value=""
 />,
           <input
-            name="password"
+            name="passwordOne"
             onChange={[Function]}
             placeholder="Password"
             type="password"
             value=""
 />,
+          <input
+            name="passwordTwo"
+            onChange={[Function]}
+            placeholder="Confirm Password"
+            type="password"
+            value=""
+/>,
           <button
-            className="signin-button"
             disabled={true}
             type="submit"
 >
-            Sign In
+            Sign Up
 </button>,
           null,
-          <Unknown />,
         ],
-        "className": "signin-div",
+        "className": "signup-div",
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "name": "username",
+            "onChange": [Function],
+            "placeholder": "Username",
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
         Object {
           "instance": null,
           "key": undefined,
@@ -107,7 +146,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "name": "password",
+            "name": "passwordOne",
             "onChange": [Function],
             "placeholder": "Password",
             "type": "password",
@@ -122,25 +161,30 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Sign In",
-            "className": "signin-button",
+            "name": "passwordTwo",
+            "onChange": [Function],
+            "placeholder": "Confirm Password",
+            "type": "password",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Sign Up",
             "disabled": true,
             "type": "submit",
           },
           "ref": null,
-          "rendered": "Sign In",
+          "rendered": "Sign Up",
           "type": "button",
         },
         null,
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
       ],
       "type": "div",
     },
@@ -153,8 +197,15 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="signin-div"
+          className="signup-div"
 >
+          <input
+                    name="username"
+                    onChange={[Function]}
+                    placeholder="Username"
+                    type="text"
+                    value=""
+          />
           <input
                     name="email"
                     onChange={[Function]}
@@ -163,22 +214,27 @@ ShallowWrapper {
                     value=""
           />
           <input
-                    name="password"
+                    name="passwordOne"
                     onChange={[Function]}
                     placeholder="Password"
                     type="password"
                     value=""
           />
+          <input
+                    name="passwordTwo"
+                    onChange={[Function]}
+                    placeholder="Confirm Password"
+                    type="password"
+                    value=""
+          />
           <button
-                    className="signin-button"
                     disabled={true}
                     type="submit"
           >
-                    Sign In
+                    Sign Up
           </button>
-          <Unknown />
 </div>,
-        "className": "signin-form",
+        "className": "signup-form",
         "onSubmit": [Function],
       },
       "ref": null,
@@ -189,6 +245,13 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <input
+              name="username"
+              onChange={[Function]}
+              placeholder="Username"
+              type="text"
+              value=""
+/>,
+            <input
               name="email"
               onChange={[Function]}
               placeholder="Email Address"
@@ -196,26 +259,46 @@ ShallowWrapper {
               value=""
 />,
             <input
-              name="password"
+              name="passwordOne"
               onChange={[Function]}
               placeholder="Password"
               type="password"
               value=""
 />,
+            <input
+              name="passwordTwo"
+              onChange={[Function]}
+              placeholder="Confirm Password"
+              type="password"
+              value=""
+/>,
             <button
-              className="signin-button"
               disabled={true}
               type="submit"
 >
-              Sign In
+              Sign Up
 </button>,
             null,
-            <Unknown />,
           ],
-          "className": "signin-div",
+          "className": "signup-div",
         },
         "ref": null,
         "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "name": "username",
+              "onChange": [Function],
+              "placeholder": "Username",
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
           Object {
             "instance": null,
             "key": undefined,
@@ -236,7 +319,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "name": "password",
+              "name": "passwordOne",
               "onChange": [Function],
               "placeholder": "Password",
               "type": "password",
@@ -251,25 +334,30 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Sign In",
-              "className": "signin-button",
+              "name": "passwordTwo",
+              "onChange": [Function],
+              "placeholder": "Confirm Password",
+              "type": "password",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Sign Up",
               "disabled": true,
               "type": "submit",
             },
             "ref": null,
-            "rendered": "Sign In",
+            "rendered": "Sign Up",
             "type": "button",
           },
           null,
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {},
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
         ],
         "type": "div",
       },
