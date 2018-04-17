@@ -62,7 +62,7 @@ describe('Restaurants', () => {
     expect(mockAddFavorite).toHaveBeenCalledWith(expected);
   });
 
-  it('should call removeFavorite on removeFavorite', () => {
+  it('should call removeFavorite on removeFavorite with correct params', () => {
     const wrapper = shallow(<Restaurants restaurant={cleanRestaurantData} 
       removeFavorite={mockRemoveFavorite} 
       isFavorite={true}/>);
