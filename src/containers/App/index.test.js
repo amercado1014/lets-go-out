@@ -1,10 +1,12 @@
 import React from 'react';
-import { App, mapDispatchToProps } from '../App';
+import { App, mapStateToProps, mapDispatchToProps } from '../App';
 import { shallow } from 'enzyme';
 import { fetchLocation } from '../../api/apiCalls/fetchLocation';
 import { fetchRestaurantsByLocation 
 } from '../../api/apiCalls/fetchRestaurantsByLocation';
 import { restaurantsCleaner } from '../../api/helpers/restaurantsCleaner';
+import { mockRestaurants } from '../../mockData/mockData';
+import * as actions from '../../actions';
 
 jest.mock('../../api/apiCalls/fetchLocation');
 jest.mock('../../api/apiCalls/fetchRestaurantsByLocation');
@@ -12,13 +14,11 @@ jest.mock('../../api/helpers/restaurantsCleaner');
 
 describe('App', () => {
   let wrapper;
-  let mockAddRestaurants;
-  let mockLocationOff;
   let mockAddUser;
+  const mockAddRestaurants = jest.fn();
+  const mockLocationOff = jest.fn();
 
   beforeEach(() => {
-    mockAddRestaurants = jest.fn();
-    mockLocationOff = jest.fn();
     mockAddUser = jest.fn();
     wrapper = shallow(<App addRestaurants={mockAddRestaurants} 
       locationOff={mockLocationOff} 
@@ -27,6 +27,10 @@ describe('App', () => {
 
   it('should math the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should have an empty string as default state for error', () => {
+    expect(wrapper.state('error')).toEqual('');
   });
 
   it('should call fetchLocation on componentDidMount', () => {
@@ -44,15 +48,47 @@ describe('App', () => {
     expect(restaurantsCleaner).toHaveBeenCalled();
   });
 
-  it.skip('should call addRestaurants on componentDidMount', () => {
+  it('should call addRestaurants on componentDidMount', () => {
     wrapper.instance().componentDidMount();
     expect(mockAddRestaurants).toHaveBeenCalled();
   });
+});
 
-  it('should call dispatch on MDTP for addRestaurants', () => {
+describe('mapStateToProps', () => {
+  it('correctly maps restaurants to props', () => {
+    const restaurants = mockRestaurants;
+    const expected = restaurants;
+    const mockState = { restaurants };
+    const mapped = mapStateToProps(mockState);
+    expect(mapped.restaurants).toEqual(expected);
+  });
+});
+
+describe('mapDispatchToProps', () => {
+  it('should call dispatch with correct params on addRestaurants', () => {
     const mockDispatch = jest.fn();
+    const restaurants = mockRestaurants;
+    const expected = actions.addRestaurants(restaurants)
     const mapped = mapDispatchToProps(mockDispatch);
-    mapped.addRestaurants();
-    expect(mockDispatch).toHaveBeenCalled();
+    mapped.addRestaurants(restaurants);
+    expect(mockDispatch).toHaveBeenCalledWith(expected);
+  });
+
+  it('should call dispatch with correct params on locationOff', () => {
+    const mockDispatch = jest.fn();
+    const boolean = false;
+    const expected = actions.locationOff(boolean);
+    const mapped = mapDispatchToProps(mockDispatch);
+    mapped.locationOff(boolean);
+    expect(mockDispatch).toHaveBeenCalledWith(expected);
+  });
+
+  it('should call dispatch with correct params on addUser', () => {
+    const mockDispatch = jest.fn();
+    const user = {name: 'Jimmy'};
+    const expected = actions.addUser(user);
+    const mapped = mapDispatchToProps(mockDispatch);
+    mapped.addUser(user);
+    expect(mockDispatch).toHaveBeenCalledWith(expected);
   });
 });
