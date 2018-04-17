@@ -6,7 +6,7 @@ describe('restaurant reducer', () => {
     expect(reducer(undefined, {})).toEqual({});
   });
 
-  it('should return state with a restaurant', () => {
+  it('should add restaurant', () => {
     const restaurant = {name: 'Dominos'};
     const expected = { name: "Dominos" };
     const action = actions.addRestaurant(restaurant);
