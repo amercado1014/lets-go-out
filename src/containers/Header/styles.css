@@ -23,7 +23,7 @@
   width: 215px;
 }
 
-.signin-link,
+.header-link,
 .restaurants-link {
   text-decoration: none;
   font-size: 20px;
@@ -31,7 +31,7 @@
   margin-right: 10px;
 }
 
-.signin-link:hover,
+.header-link:hover,
 .restaurants-link:hover {
   color: white;
 }

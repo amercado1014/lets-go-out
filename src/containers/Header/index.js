@@ -65,9 +65,9 @@ export class Header extends Component {
           {authUser 
             ? <div>
               <SignOut />
-              <Link className="signin-link" to='/favorites'>Favorites</Link>
+              <Link className="header-link" to='/favorites'>Favorites</Link>
             </div>
-            : <Link className="signin-link" to='/signin'>Sign In</Link>
+            : <Link className="header-link" to='/signin'>Sign In</Link>
           }
         </div>
       </div>
