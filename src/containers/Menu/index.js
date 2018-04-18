@@ -12,8 +12,8 @@ export const Menu = ({menu, restaurant}) => {
       return (
         <div className="item" key={item.apiKey}>
           <div className="item-info">
-            <p>{item.name}</p>
-            <p>${item.basePrice}</p>
+            <p className="item-name">{item.name}</p>
+            <p className="item-price">${item.basePrice}</p>
           </div>
           <div className="description">
             {item.description &&

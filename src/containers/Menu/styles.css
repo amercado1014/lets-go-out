@@ -8,7 +8,9 @@
   flex-direction: row;
   background-color: #20161C;
   justify-content: space-around;
-  width: 80%;
+  align-items: center;
+  width: 73%;
+  height: 250px;
   margin: 30px auto; 
 }
 
@@ -17,6 +19,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  width: 80%;
+  margin: auto;
 }
 
 .restaurant-logo {
@@ -48,8 +52,19 @@
 }
 
 .item-info {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 130%;
+  width: 86%;
+}
+
+.description {
+  text-align: left;
+  width: 86%
+}
+
+.item-name {
+  float: left;
+  
+}
+
+.item-price {
+  float: right;
 }
