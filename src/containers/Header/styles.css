@@ -36,7 +36,6 @@
   color: white;
 }
 
-.signin-link:active,
-.restaurant-link:active {
+.active {
   color: purple;
 }
