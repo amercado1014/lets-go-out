@@ -43,9 +43,15 @@
 }
 
 .favorite-icon {
-  height: 30px;
+  height: 35px;
   width: 35px;
   background-color: white;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.favorite-icon:hover {
+  background-color: #afd045;
 }
 
 .favorite-div {
@@ -60,5 +66,6 @@
 }
 
 .favorite-background {
-  background-color: #afd045;
+  background-color: yellow;
+  border: 2px solid yellow;
 }

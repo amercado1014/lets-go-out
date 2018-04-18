@@ -7,6 +7,64 @@
   display: flex;
   flex-direction: row;
   background-color: #20161C;
-  justify-content: space-around
+  justify-content: space-around;
+  align-items: center;
+  width: 73%;
+  height: 250px;
+  margin: 30px auto; 
 }
 
+.menu-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+}
+
+.restaurant-logo {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.section-name {
+  display: flex;
+  background-color: #20161C;
+  height: 60px;
+  width: 24%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px auto;
+}
+
+.item {
+  display: flex;
+  background-color: #20161C;
+  height: 200px;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.item-info {
+  width: 86%;
+}
+
+.description {
+  text-align: left;
+  width: 86%
+}
+
+.item-name {
+  float: left;
+  
+}
+
+.item-price {
+  float: right;
+}

@@ -1,7 +1,8 @@
 import { apiKey } from './apiKey';
 
 export const fetchRestaurantsByLocation = async location => {
-  const root = 'https://api.eatstreet.com/publicapi/v1'; 
+  const root = 'https://api.eatstreet.com/publicapi/v1';
+  // eslint-disable-next-line 
   const url = `${root}/restaurant/search?latitude=${location.lat}&longitude=${location.lng}&method=both`;
   try {
     const response = await fetch(url, {

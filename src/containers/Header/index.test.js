@@ -16,11 +16,13 @@ describe('Header', () => {
   let wrapper;
   const mockLocationOff = jest.fn();
   const mockAddRestaurants = jest.fn();
+  const mockHistory = { push: jest.fn() };
 
   beforeEach(() => {
     wrapper = shallow(<Header addRestaurants={mockAddRestaurants} 
       locationOff={mockLocationOff} 
-      restaurants={mockRestaurants} />);
+      restaurants={mockRestaurants} 
+      history={mockHistory}/>);
   });
 
   it('should math the snapshot', () => {
@@ -62,6 +64,12 @@ describe('Header', () => {
     expect(mockAddRestaurants).toHaveBeenCalledWith(expected);
   });
 
+  it('should call history.push with correct params on handleSubmit', () => {
+    const mockEvent = { preventDefault: jest.fn() };
+    wrapper.instance().handleSubmit(mockEvent);
+    expect(mockHistory.push).toHaveBeenCalledWith('/');
+  });
+
   it('should call locationOff on handleSubmit with correct params', () => {
     const mockEvent = { preventDefault: jest.fn() };
     wrapper.instance().handleSubmit(mockEvent);
@@ -91,7 +99,7 @@ describe('mapDispatchToProps', () => {
   it('should call dispatch with correct params on addRestaurants', () => {
     const mockDispatch = jest.fn();
     const restaurants = mockRestaurants;
-    const expected = actions.addRestaurants(restaurants)
+    const expected = actions.addRestaurants(restaurants);
     const mapped = mapDispatchToProps(mockDispatch);
     mapped.addRestaurants(restaurants);
     expect(mockDispatch).toHaveBeenCalledWith(expected);
