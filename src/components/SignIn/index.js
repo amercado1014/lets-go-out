@@ -3,6 +3,7 @@ import './styles.css';
 import { SignUpLink } from '../SignUpLink';
 import { withRouter, Link } from 'react-router-dom';
 import { auth } from '../../firebase';
+import PropTypes from "prop-types";
 
 export class SignIn extends Component {
   constructor(props) {
@@ -79,5 +80,9 @@ export class SignIn extends Component {
     );
   }
 }
+
+SignIn.propTypes = {
+  history: PropTypes.object
+};
 
 export default withRouter(SignIn);

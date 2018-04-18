@@ -429,11 +429,19 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <Link
+          className="fav-back-btn"
+          replace={false}
+          to="/"
+>
+          ◀ Back
+</Link>,
         <div
           className="menu-header"
 >
           <img
                     alt="restaurant logo"
+                    className="restaurant-logo"
                     src="https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png"
           />
           <div
@@ -1103,11 +1111,26 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "◀ Back",
+          "className": "fav-back-btn",
+          "replace": false,
+          "to": "/",
+        },
+        "ref": null,
+        "rendered": "◀ Back",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
         "nodeType": "host",
         "props": Object {
           "children": Array [
             <img
               alt="restaurant logo"
+              className="restaurant-logo"
               src="https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png"
 />,
             <div
@@ -1143,6 +1166,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "alt": "restaurant logo",
+              "className": "restaurant-logo",
               "src": "https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png",
             },
             "ref": null,
@@ -5090,11 +5114,19 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <Link
+            className="fav-back-btn"
+            replace={false}
+            to="/"
+>
+            ◀ Back
+</Link>,
           <div
             className="menu-header"
 >
             <img
                         alt="restaurant logo"
+                        className="restaurant-logo"
                         src="https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png"
             />
             <div
@@ -5764,11 +5796,26 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "◀ Back",
+            "className": "fav-back-btn",
+            "replace": false,
+            "to": "/",
+          },
+          "ref": null,
+          "rendered": "◀ Back",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": Array [
               <img
                 alt="restaurant logo"
+                className="restaurant-logo"
                 src="https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png"
 />,
               <div
@@ -5804,6 +5851,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "alt": "restaurant logo",
+                "className": "restaurant-logo",
                 "src": "https://eatstreet-static.s3.amazonaws.com/assets/images/restaurant_logos/big-daddys-pizza-lakewood-21135_1407868711096.png",
               },
               "ref": null,
