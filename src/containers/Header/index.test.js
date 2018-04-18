@@ -99,7 +99,7 @@ describe('mapDispatchToProps', () => {
   it('should call dispatch with correct params on addRestaurants', () => {
     const mockDispatch = jest.fn();
     const restaurants = mockRestaurants;
-    const expected = actions.addRestaurants(restaurants)
+    const expected = actions.addRestaurants(restaurants);
     const mapped = mapDispatchToProps(mockDispatch);
     mapped.addRestaurants(restaurants);
     expect(mockDispatch).toHaveBeenCalledWith(expected);

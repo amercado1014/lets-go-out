@@ -110,7 +110,7 @@ ShallowWrapper {
           className="navigation"
 >
           <Link
-                    className="signin-link"
+                    className="header-link"
                     replace={false}
                     to="/signin"
           >
@@ -211,7 +211,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <Link
-            className="signin-link"
+            className="header-link"
             replace={false}
             to="/signin"
 >
@@ -226,7 +226,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": "Sign In",
-            "className": "signin-link",
+            "className": "header-link",
             "replace": false,
             "to": "/signin",
           },
@@ -278,7 +278,7 @@ ShallowWrapper {
             className="navigation"
 >
             <Link
-                        className="signin-link"
+                        className="header-link"
                         replace={false}
                         to="/signin"
             >
@@ -379,7 +379,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <Link
-              className="signin-link"
+              className="header-link"
               replace={false}
               to="/signin"
 >
@@ -394,7 +394,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "Sign In",
-              "className": "signin-link",
+              "className": "header-link",
               "replace": false,
               "to": "/signin",
             },
