@@ -2,6 +2,7 @@ import React from 'react';
 import './styles.css';
 import Restaurants from '../Restaurants';
 import { connect } from 'react-redux';
+import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 export const Favorites = ({favorites}) => {
@@ -15,12 +16,19 @@ export const Favorites = ({favorites}) => {
     <div>
       <div className="favorites">
         {displayFavorites.length > 0 
-          ? displayFavorites 
+          ? <div>
+            <Link className="fav-back-btn" to='/'>◀ Back</Link>
+            {displayFavorites}
+          </div> 
           : <div className="favorites-message">
+            <div className="back-div">
+              <Link className="back-btn" to='/'>◀ Back</Link>
+            </div>
             <h4>
               There are no favorites to display.
             </h4>
-          </div>}
+          </div>
+        }
       </div>
     </div>
   );
@@ -34,4 +42,4 @@ Favorites.propTypes = {
   favorites: PropTypes.array
 };
 
-export default connect(mapStateToProps)(Favorites);
+export default withRouter(connect(mapStateToProps)(Favorites));

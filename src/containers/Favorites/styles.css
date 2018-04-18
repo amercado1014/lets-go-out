@@ -8,9 +8,37 @@
   background-color: #20161C;
   font-size: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 10% auto;
   width: 50vw;
   height: 40%;
+}
+
+.back-btn {
+  display: block;
+  text-align: right;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  bottom: 95px;
+  left: 10px;
+}
+
+.back-div {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  height: 20px;
+}
+
+.back-btn:hover,
+.fav-back-btn:hover {
+  color: #afd045;
+}
+
+.fav-back-btn {
+  text-decoration: none;
+  color: white;
 }
