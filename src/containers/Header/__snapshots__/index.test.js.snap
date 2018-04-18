@@ -109,13 +109,14 @@ ShallowWrapper {
         <div
           className="navigation"
 >
-          <Link
+          <NavLink
+                    activeClassName="active"
+                    ariaCurrent="true"
                     className="header-link"
-                    replace={false}
                     to="/signin"
           >
                     Sign In
-          </Link>
+          </NavLink>
 </div>,
       ],
       "className": "header",
@@ -210,24 +211,26 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <Link
+          "children": <NavLink
+            activeClassName="active"
+            ariaCurrent="true"
             className="header-link"
-            replace={false}
             to="/signin"
 >
             Sign In
-</Link>,
+</NavLink>,
           "className": "navigation",
         },
         "ref": null,
         "rendered": Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
+            "activeClassName": "active",
+            "ariaCurrent": "true",
             "children": "Sign In",
             "className": "header-link",
-            "replace": false,
             "to": "/signin",
           },
           "ref": null,
@@ -277,13 +280,14 @@ ShallowWrapper {
           <div
             className="navigation"
 >
-            <Link
+            <NavLink
+                        activeClassName="active"
+                        ariaCurrent="true"
                         className="header-link"
-                        replace={false}
                         to="/signin"
             >
                         Sign In
-            </Link>
+            </NavLink>
 </div>,
         ],
         "className": "header",
@@ -378,24 +382,26 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <Link
+            "children": <NavLink
+              activeClassName="active"
+              ariaCurrent="true"
               className="header-link"
-              replace={false}
               to="/signin"
 >
               Sign In
-</Link>,
+</NavLink>,
             "className": "navigation",
           },
           "ref": null,
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "function",
             "props": Object {
+              "activeClassName": "active",
+              "ariaCurrent": "true",
               "children": "Sign In",
               "className": "header-link",
-              "replace": false,
               "to": "/signin",
             },
             "ref": null,

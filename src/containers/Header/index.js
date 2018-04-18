@@ -5,7 +5,7 @@ import { fetchRestaurantsBySearch
 import { restaurantsCleaner } from '../../api/helpers/restaurantsCleaner';
 import { addRestaurants, locationOff } from '../../actions/';
 import { connect } from 'react-redux';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter, NavLink } from 'react-router-dom';
 import SignOut from '../SignOut';
 import PropTypes from 'prop-types';
 import logo from '../../images/logo.png';
@@ -65,9 +65,13 @@ export class Header extends Component {
           {authUser 
             ? <div>
               <SignOut />
-              <Link className="header-link" to='/favorites'>Favorites</Link>
+              <NavLink 
+                className="header-link" 
+                to='/favorites'>Favorites</NavLink>
             </div>
-            : <Link className="header-link" to='/signin'>Sign In</Link>
+            : <NavLink 
+              className="header-link" 
+              to='/signin'>Sign In</NavLink>
           }
         </div>
       </div>
