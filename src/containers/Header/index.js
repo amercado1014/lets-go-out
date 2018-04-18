@@ -5,7 +5,7 @@ import { fetchRestaurantsBySearch
 import { restaurantsCleaner } from '../../api/helpers/restaurantsCleaner';
 import { addRestaurants, locationOff } from '../../actions/';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import SignOut from '../SignOut';
 import PropTypes from 'prop-types';
 import logo from '../../images/logo.png';
@@ -28,6 +28,7 @@ export class Header extends Component {
 
   handleSubmit = async event => {
     const { searchValue } = this.state;
+    const { history } = this.props;
     event.preventDefault();
     try {
       const restaurants = await fetchRestaurantsBySearch(searchValue);
@@ -36,6 +37,7 @@ export class Header extends Component {
     } catch (error) {
       this.setState({error: error.details});
     }
+    history.push('/');
     this.props.locationOff(false);
     this.setState({ searchValue: ''});
   }
@@ -90,4 +92,4 @@ Header.propTypes = {
   restaurants: PropTypes.array
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header));

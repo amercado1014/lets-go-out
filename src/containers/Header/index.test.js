@@ -16,11 +16,13 @@ describe('Header', () => {
   let wrapper;
   const mockLocationOff = jest.fn();
   const mockAddRestaurants = jest.fn();
+  const mockHistory = { push: jest.fn() };
 
   beforeEach(() => {
     wrapper = shallow(<Header addRestaurants={mockAddRestaurants} 
       locationOff={mockLocationOff} 
-      restaurants={mockRestaurants} />);
+      restaurants={mockRestaurants} 
+      history={mockHistory}/>);
   });
 
   it('should math the snapshot', () => {
@@ -60,6 +62,12 @@ describe('Header', () => {
     wrapper.instance().handleSubmit(mockEvent);
     const expected = cleanRestaurantData;
     expect(mockAddRestaurants).toHaveBeenCalledWith(expected);
+  });
+
+  it('should call history.push with correct params on handleSubmit', () => {
+    const mockEvent = { preventDefault: jest.fn() };
+    wrapper.instance().handleSubmit(mockEvent);
+    expect(mockHistory.push).toHaveBeenCalledWith('/');
   });
 
   it('should call locationOff on handleSubmit with correct params', () => {
