@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './styles.css';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { auth } from '../../firebase';
 
 export class SignUp extends Component {
@@ -49,6 +49,10 @@ export class SignUp extends Component {
       <form 
         onSubmit={this.handleSubmit}
         className="signup-form">
+        <div className="close-div">
+          <Link className="close-btn" to='/'>X</Link>
+        </div>
+        <h1>Sign Up</h1>
         <div className="signup-div">
           <input
             type="text"
@@ -79,7 +83,9 @@ export class SignUp extends Component {
             disabled={isInvalid}>
           Sign Up
           </button>
-          { error && <p>{error}</p> }
+          <div className="error-div">
+            {error && <p>{error}</p>}
+          </div>
         </div>
       </form>
     );

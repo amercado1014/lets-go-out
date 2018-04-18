@@ -15,27 +15,28 @@
   margin-right: 10px;
 }
 
-input {
-  height: 25px;
-  width: 215px;
-}
-
 .header-input {
   font-size: 20px;
   color: black;
   background-color: #afd045;
+  height: 25px;
+  width: 215px;
 }
 
-.signin-link {
+.signin-link,
+.restaurants-link {
   text-decoration: none;
   font-size: 20px;
   color: black;
+  margin-right: 10px;
 }
 
-.signin-link:hover {
+.signin-link:hover,
+.restaurants-link:hover {
   color: white;
 }
 
-.signin-link:active {
+.signin-link:active,
+.restaurant-link:active {
   color: purple;
 }

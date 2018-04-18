@@ -10,7 +10,7 @@
 .signup-form {
   color: white;
   background-color: #20161C;
-  height: 80vh;
+  height: 67vh;
   width: 50vw;
   margin: 2% auto;
   display: flex;
@@ -30,6 +30,10 @@
   font-size: 20px;
   color: black;
   margin-bottom: 20px;
+}
+
+.signup-div input {
+  width: 400px;
 }
 
 .signup-div button {

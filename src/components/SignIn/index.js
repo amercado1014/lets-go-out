@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './styles.css';
 import { SignUpLink } from '../SignUpLink';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { auth } from '../../firebase';
 
 export class SignIn extends Component {
@@ -32,6 +32,12 @@ export class SignIn extends Component {
     }
   }
 
+  closeSignIn = event => {
+    const { history } = this.props;
+    event.preventDefault();
+    history.push('/');
+  }
+
   render() {
     const { email, password, error } = this.state;
     const isInvalid = password === '' || email === '';
@@ -40,6 +46,10 @@ export class SignIn extends Component {
       <form 
         onSubmit={this.handleSubmit}
         className="signin-form">
+        <div className="close-div">
+          <Link className="close-btn" to='/'>X</Link>
+        </div>
+        <h1>Sign In</h1>
         <div className="signin-div">
           <input
             type="text"
@@ -60,7 +70,9 @@ export class SignIn extends Component {
             className="signin-button">
           Sign In
           </button>
-          {error && <p>{error}</p>}
+          <div className="error-div">
+            {error && <p>{error}</p>}
+          </div>
           <SignUpLink />
         </div>
       </form>
