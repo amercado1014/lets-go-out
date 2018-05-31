@@ -18,4 +18,12 @@ Let's Order Out is an application that allows users to view information on resta
 
 * Aldo Mercado [Github](https://github.com/amercado1014)
 
+## Set Up
+
+Clone this repository
+
+Run `npm install` from the root directory
+
+Run `npm start` and visit localhost:3000 in your browser
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
